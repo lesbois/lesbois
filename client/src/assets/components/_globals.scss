@@ -1,0 +1,9 @@
+a {
+    text-decoration: none;
+    &:hover, &:active, &:visited, a:focus, a:link {
+        text-decoration: none;
+    }
+    &:-webkit-any-link{
+        text-decoration:none;
+    }
+}
