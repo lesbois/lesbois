@@ -1,5 +1,10 @@
 .navbar {
-    &-fixed {
-        border: 1px solid red;
+    border: 1px solid blue;
+    
+    &.navbar-fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
     }
 }

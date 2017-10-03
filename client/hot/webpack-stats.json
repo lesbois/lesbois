@@ -9,9 +9,9 @@
                 "path": "/Users/kinbasco/Desktop/Code/lesbois/client/hot/app.js"
             },
             {
-                "name": "0.33f7ca5606d35b0c6349.hot-update.js",
-                "publicPath": "http://localhost:8080/hot/js/0.33f7ca5606d35b0c6349.hot-update.js",
-                "path": "/Users/kinbasco/Desktop/Code/lesbois/client/hot/0.33f7ca5606d35b0c6349.hot-update.js"
+                "name": "0.d43fc792b51ca908adaf.hot-update.js",
+                "publicPath": "http://localhost:8080/hot/js/0.d43fc792b51ca908adaf.hot-update.js",
+                "path": "/Users/kinbasco/Desktop/Code/lesbois/client/hot/0.d43fc792b51ca908adaf.hot-update.js"
             },
             {
                 "name": "app.js.map",
@@ -19,9 +19,9 @@
                 "path": "/Users/kinbasco/Desktop/Code/lesbois/client/hot/app.js.map"
             },
             {
-                "name": "0.33f7ca5606d35b0c6349.hot-update.js.map",
-                "publicPath": "http://localhost:8080/hot/js/0.33f7ca5606d35b0c6349.hot-update.js.map",
-                "path": "/Users/kinbasco/Desktop/Code/lesbois/client/hot/0.33f7ca5606d35b0c6349.hot-update.js.map"
+                "name": "0.d43fc792b51ca908adaf.hot-update.js.map",
+                "publicPath": "http://localhost:8080/hot/js/0.d43fc792b51ca908adaf.hot-update.js.map",
+                "path": "/Users/kinbasco/Desktop/Code/lesbois/client/hot/0.d43fc792b51ca908adaf.hot-update.js.map"
             }
         ],
         "hot": [
@@ -37,8 +37,8 @@
             }
         ]
     },
-    "startTime": 1507013923950,
-    "endTime": 1507013925600,
+    "startTime": 1507016645398,
+    "endTime": 1507016646461,
     "error": "ModuleBuildError",
-    "message": "Module build failed: SyntaxError: Expected corresponding JSX closing tag for <img> (11:24)\n\n   9 |                         <a href=\"#\" className=\"navbar-brand mr-2\">\n  10 |                             <img src=\"/static/img/logo-lbs.png\">\n> 11 |                         </a>\n     |                         ^\n  12 |                     </section>\n  13 |                     <section className=\"navbar-section\">\n  14 |                         <a href=\"#\" className=\"navbar-brand mr-2\">Spectre.css</a>\n"
+    "message": "Module build failed: SyntaxError: Expected corresponding JSX closing tag for <br> (14:74)\n\n  12 |                         </div>\n  13 |                         <div className=\"column col-xs-6\">\n> 14 |                             <h1>LES BOIS <br> ENGINEERING <br> INNOVATIONS</h1>\n     |                                                                           ^\n  15 |                         </div>\n  16 |                     </div>\n  17 |                 </div>\n"
 }
