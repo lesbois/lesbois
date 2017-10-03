@@ -11,7 +11,7 @@ class Footer extends Component {
                             <h1>LES BOIS <br/> ENGINEERING INNOVATIONS</h1>
                         </div>
                         <div className="column col-xs-6">
-                            <button className="btn btn-default">CONTACT US</button>
+                            <button className="btn btn-default btn-huge">CONTACT US</button>
                         </div>
                     </div>
                 </div>

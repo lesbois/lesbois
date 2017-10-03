@@ -4,5 +4,10 @@
 @import "theme/spectre-exp";
 
 @import "components/navbar";
-@import "components/jumbotron";
-@import "components/footer";
+@import "components/button";
+
+
+@import "pages/jumbotron";
+@import "pages/footer";
+@import "pages/about";
+@import "pages/partners";

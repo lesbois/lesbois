@@ -17,7 +17,7 @@ class Jumbotron extends Component {
 
                             <h3 className="sub-heading">{`We're engineering awsome`}</h3>
 
-                            <button className="btn">CONTACT US</button>
+                            <button className="btn btn-default btn-huge">CONTACT US</button>
                         </div>
                     </div>
                 </div>

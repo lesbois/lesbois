@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class WhatWeDo extends Component {
     render() {
         return(
-            <div id="whatwedopage" className="page-section">
+            <div id="what-we-do" className="page-section">
                 <div className="container grid-lg">
                     <h1>WHAT WE DO</h1>
 

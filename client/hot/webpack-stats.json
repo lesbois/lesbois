@@ -9,9 +9,9 @@
                 "path": "/Users/kinbasco/Desktop/Code/lesbois/client/hot/app.js"
             },
             {
-                "name": "0.d8be6daafe5081dce4d0.hot-update.js",
-                "publicPath": "http://localhost:8080/hot/js/0.d8be6daafe5081dce4d0.hot-update.js",
-                "path": "/Users/kinbasco/Desktop/Code/lesbois/client/hot/0.d8be6daafe5081dce4d0.hot-update.js"
+                "name": "0.ed8872b127e0922cf755.hot-update.js",
+                "publicPath": "http://localhost:8080/hot/js/0.ed8872b127e0922cf755.hot-update.js",
+                "path": "/Users/kinbasco/Desktop/Code/lesbois/client/hot/0.ed8872b127e0922cf755.hot-update.js"
             },
             {
                 "name": "app.js.map",
@@ -19,9 +19,9 @@
                 "path": "/Users/kinbasco/Desktop/Code/lesbois/client/hot/app.js.map"
             },
             {
-                "name": "0.d8be6daafe5081dce4d0.hot-update.js.map",
-                "publicPath": "http://localhost:8080/hot/js/0.d8be6daafe5081dce4d0.hot-update.js.map",
-                "path": "/Users/kinbasco/Desktop/Code/lesbois/client/hot/0.d8be6daafe5081dce4d0.hot-update.js.map"
+                "name": "0.ed8872b127e0922cf755.hot-update.js.map",
+                "publicPath": "http://localhost:8080/hot/js/0.ed8872b127e0922cf755.hot-update.js.map",
+                "path": "/Users/kinbasco/Desktop/Code/lesbois/client/hot/0.ed8872b127e0922cf755.hot-update.js.map"
             }
         ],
         "hot": [
@@ -37,8 +37,8 @@
             }
         ]
     },
-    "startTime": 1507018400456,
-    "endTime": 1507018401976,
+    "startTime": 1507019732615,
+    "endTime": 1507019734148,
     "error": "ModuleBuildError",
-    "message": "Module build failed: SyntaxError: Expected corresponding JSX closing tag for <img> (13:20)\n\n  11 |                     <div className=\"column col-xs-3\">\n  12 |                         <img alt=\"photo\">\n> 13 |                     </div>\n     |                     ^\n  14 |                     <div className=\"column col-xs-3\">\n  15 |                         <img alt=\"photo\">\n  16 |                     </div>\n"
+    "message": "Module build failed: \n@import \"components/jumbotron\";\n^\n      File to import not found or unreadable: /Users/kinbasco/Desktop/Code/lesbois/client/src/assets/components/_jumbotron.scss.\nParent style sheet: stdin\n      in /Users/kinbasco/Desktop/Code/lesbois/client/src/assets/app.scss (line 7, column 1)"
 }
