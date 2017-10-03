@@ -1,0 +1,32 @@
+{
+    "status": "done",
+    "publicPath": "http://localhost:8080/hot/js/",
+    "chunks": {
+        "app": [
+            {
+                "name": "app.js",
+                "publicPath": "http://localhost:8080/hot/js/app.js",
+                "path": "/Users/kinbasco/Desktop/Code/lesbois/client/hot/app.js"
+            },
+            {
+                "name": "app.js.map",
+                "publicPath": "http://localhost:8080/hot/js/app.js.map",
+                "path": "/Users/kinbasco/Desktop/Code/lesbois/client/hot/app.js.map"
+            }
+        ],
+        "hot": [
+            {
+                "name": "hot.js",
+                "publicPath": "http://localhost:8080/hot/js/hot.js",
+                "path": "/Users/kinbasco/Desktop/Code/lesbois/client/hot/hot.js"
+            },
+            {
+                "name": "hot.js.map",
+                "publicPath": "http://localhost:8080/hot/js/hot.js.map",
+                "path": "/Users/kinbasco/Desktop/Code/lesbois/client/hot/hot.js.map"
+            }
+        ]
+    },
+    "startTime": 1507000493928,
+    "endTime": 1507000496644
+}
