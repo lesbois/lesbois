@@ -4,8 +4,6 @@ from __future__ import absolute_import, unicode_literals
 import os
 import sys
 from django.conf import settings
-import environ
-env = environ.Env()
 
 if __name__ == "__main__":
     if settings.DEBUG:

@@ -27,6 +27,10 @@
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
         {% endblock %}
+
+        {% if debug %}
+            {% load render_bundle from webpack_loader %}
+        {% endif %}
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
@@ -40,5 +44,9 @@
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
         {% endblock %}
+
+        {% if debug %}
+            {% render_bundle 'app' %}
+        {% endif %}
     </body>
 </html>
