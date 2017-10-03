@@ -3,11 +3,12 @@ from __future__ import absolute_import, unicode_literals
 
 import os
 import sys
+from django.conf import settings
 import environ
 env = environ.Env()
 
 if __name__ == "__main__":
-    if env('DEBUG'):
+    if settings.DEBUG:
         os.environ.setdefault("DJANGO_SETTINGS_MODULE",
                                 "lesbois.settings.dev")
     else:
