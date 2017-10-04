@@ -15,6 +15,7 @@ class App extends Component {
     render() {
         const { props } = this
         const noform = omit(props, 'form')
+        console.log(props)
         return(
             <div className="main">
                 {Children.map(this.props.children, (child) => {

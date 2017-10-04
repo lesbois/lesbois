@@ -1,7 +1,14 @@
 client/node_modules
 client/hot
+media
 .DS_Store
 
 *.pyc
 *.pyo
 .env
+.idea
+home/__pycache__/
+home/migrations/__pycache__/
+lesbois/__pycache__/
+lesbois/settings/__pycache__/
+search/__pycache__/

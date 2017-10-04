@@ -13,6 +13,12 @@ INSTALLED_APPS += [
     'webpack_loader'
 ]
 
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "lesbois.local"
+]
+
 WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': not DEBUG,

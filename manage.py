@@ -8,12 +8,10 @@ env = environ.Env()
 env.read_env('.env')
 
 if __name__ == "__main__":
-    if env('LOCAL'):
-        os.environ.setdefault("DJANGO_SETTINGS_MODULE",
-                                "lesbois.settings.dev")
+    if env('LOCAL', default=True):
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "lesbois.settings.dev")
     else:
-        os.environ.setdefault("DJANGO_SETTINGS_MODULE",
-                                "lesbois.settings.production")
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "lesbois.settings.production")
 
     from django.core.management import execute_from_command_line
 
