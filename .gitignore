@@ -1,5 +1,6 @@
 client/node_modules
 client/hot
+media
 .DS_Store
 
 *.pyc

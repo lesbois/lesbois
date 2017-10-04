@@ -9,7 +9,8 @@
 {% block extra_js %}
     <script type="text/javascript">
         app.useClient({
-            token: '{{ csrf_token }}'
+            token: '{{ csrf_token }}',
+            sections: JSON.parse('{{ sections | safe }}')
         }, 'app')
     </script>
 {% endblock %}
