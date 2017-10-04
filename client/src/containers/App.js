@@ -3,11 +3,11 @@ import { connect } from 'react-redux'
 import omit from 'lodash/omit'
 
 const screens = {
-    xs: '480px',
-    sm: '600px',
-    md: '960px',
-    xl: '1280px',
-    xxl: '1140px'
+    xs: 480,
+    sm: 600,
+    md: 960,
+    xl: 1280,
+    xxl: 1140
 }
 
 
@@ -15,11 +15,10 @@ class App extends Component {
     render() {
         const { props } = this
         const noform = omit(props, 'form')
-        console.log(props)
         return(
             <div className="main">
                 {Children.map(this.props.children, (child) => {
-                    return cloneElement(child, { ...noform, screen })
+                    return cloneElement(child, { ...noform, screens })
                 })}
             </div>
         )

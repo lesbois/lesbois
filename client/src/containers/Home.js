@@ -40,9 +40,12 @@ const menuSettings = [
 class Home extends Component {
     render() {
         const { props } = this
+        const { screens } = props
         return(
             <div className="home">
-                <Navigation menu={menuSettings}/>
+                <Navigation
+                    screens={screens}
+                    menu={menuSettings} />
                 <Jumbotron />
                 <WhatWeDo />
                 <About />

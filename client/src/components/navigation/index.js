@@ -2,8 +2,13 @@ import React, { Component } from 'react'
 import jump from 'jump.js'
 import map from 'lodash/map'
 import once from 'lodash/once'
+import Media from 'react-media'
+import MobileMenu from './MobileMenu'
 
 class Navigation extends Component {
+    state = {
+        isOpen: false
+    }
     moveTo(e) {
         e.preventDefault()
         const { attributes } = e.currentTarget
@@ -34,9 +39,15 @@ class Navigation extends Component {
             this.scrollListener.bind(this)
         )
     }
+
+    toggle(e) {
+        e.preventDefault()
+        this.setState({isOpen: !this.state.isOpen})
+    }
     render() {
-        const { props, moveTo } = this
-        const { menu } = props
+        const { props, moveTo, state, toggle } = this
+        const { menu, screens } = props
+        const { isOpen } = state
         return(
             <div ref="navbar" className="navbar-container">
                 <div className="container grid-xl">
@@ -46,19 +57,25 @@ class Navigation extends Component {
                                 <img src="/static/img/logo-lbs.png" />
                                 <img src="/static/img/logo-flipped.png" />
                             </a>
-                            <a href="#" className="show-sm btn btn-primary btn-lg ml-auto"><i className="icon icon-menu"></i></a>
+                            <a href="#" onClick={toggle.bind(this)} className="show-sm btn btn-primary btn-lg ml-auto"><i className="icon icon-menu"></i></a>
                         </section>
                         <section className="navbar-section">
-                            <ul className="navbar-menu">
-                                {map(menu, (value, key) => {
-                                    const { hashTag, name } = value
-                                    return(
-                                        <li key={key} className="navbar-menu-item">
-                                            <a href={hashTag} onClick={moveTo.bind(this)}>{name.toUpperCase()}</a>
-                                        </li>
-                                    )
-                                })}
-                            </ul>
+                            <Media query={{ maxWidth: screens.sm }}>
+                                {matches => matches ? (
+                                    <MobileMenu isOpen={isOpen} menu={menu} />
+                                ) : (
+                                  <ul className="navbar-menu">
+                                      {map(menu, (value, key) => {
+                                          const { hashTag, name } = value
+                                          return(
+                                              <li key={key} className="navbar-menu-item">
+                                                  <a href={hashTag} onClick={moveTo.bind(this)}>{name.toUpperCase()}</a>
+                                              </li>
+                                          )
+                                      })}
+                                  </ul>
+                                )}
+                            </Media>
                         </section>
                     </header>
                 </div>
