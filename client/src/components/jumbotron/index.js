@@ -4,13 +4,13 @@ class Jumbotron extends Component {
     render() {
         const { props } = this
         return (
-            <div className="jumbotron">
-                <div className="container grid-lg">
+            <div id="jumbotron" className="jumbotron">
+                <div className="container grid-xl">
                     <div className="columns">
                         <div className="column col-xs-6">
-                            <img src="/static/img/banner-image.png" />
+                            <img src="/static/img/banner-image.png" className="img-responsive"/>
                         </div>
-                        <div className="column col-xs-6">
+                        <div className="column col-xs-6 jumbotron-content">
                             <h1 className="heading">
                                 LES BOIS <br/> ENGINEERING <br/> INNOVATIONS
                             </h1>

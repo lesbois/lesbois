@@ -1,10 +1,31 @@
 .navbar {
-    border: 1px solid blue;
-    
-    &.navbar-fixed {
+    &-container {
         position: fixed;
-        left: 0;
         top: 0;
         width: 100%;
+        z-index: 1000;
+    }
+    &-menu {
+        margin: 0;
+        padding: 0;
+        &-item {
+            display: inline-table;
+            margin: 0;
+            a {
+                display: block;
+                padding: 25px 10px;
+                color: #fff;
+                opacity: .8;
+                letter-spacing: 1px;
+                &:any-link {
+                    text-decoration: none;
+                }
+            }
+            &:last-child {
+                a {
+                    padding: 25px 0 25px 10px;
+                }
+            }
+        }
     }
 }

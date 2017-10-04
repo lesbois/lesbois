@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 class About extends Component {
     render() {
         return(
-            <div id="aboutpage" className="page-section">
+            <div id="about" className="section">
                 <div className="container grid-lg">
-                    <h1>ABOUT</h1>
+                    <h1 className="title text-center">ABOUT</h1>
 
                     <h3>LES BOIS ENGINEERING INNOVATIONS</h3>
 
