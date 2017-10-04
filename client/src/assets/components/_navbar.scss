@@ -1,14 +1,47 @@
+
 .navbar {
+    &-brand {
+        overflow: hidden;
+        height: 33px;
+        img {
+            display: block;
+        }
+    }
     &-container {
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 1000;
+        z-index: 999999;
+        &.switched {
+            background: #fff;
+            a.navbar-brand {
+                img {
+                    animation-name: flip;
+                    animation-duration: .5s;
+                    animation-fill-mode: forwards;
+                }
+            }
+            .navbar-menu {
+                li {
+                    a {
+                        animation-name: changeColor;
+                        animation-duration: .5s;
+                        animation-fill-mode: forwards;
+                        animation-direction: normal;
+                    }
+                }
+            }
+
+        }
     }
     &-menu {
         margin: 0;
         padding: 0;
         &-item {
+            @media only screen and (max-width: $size-sm) {
+                display: block;
+                float: none;
+            }
             display: inline-table;
             margin: 0;
             a {
@@ -27,5 +60,35 @@
                 }
             }
         }
+    }
+    &-section {
+        @media only screen and (max-width: $size-sm) {
+            width: 100%;
+            flex: auto !important;
+            &:first-child {
+                padding: 25px;
+            }
+            &:last-child {
+                justify-content: flex-start !important;
+            }
+        }
+    }
+}
+
+@keyframes changeColor {
+    from {
+        color: #fff;
+    }
+    to {
+        color: $primary-color;
+    }
+}
+
+@keyframes flip {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-33px);
     }
 }

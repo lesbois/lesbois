@@ -7,7 +7,7 @@ import WhatWeDo from '../components/sections/whatwedo'
 import About from '../components/sections/about'
 import Team from '../components/sections/team'
 import Partners from '../components/sections/partners'
-import Daily from '../components/daily'
+import Daily from '../components/sections/daily'
 import Footer from '../components/footer'
 
 const menuSettings = [

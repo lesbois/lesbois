@@ -1,3 +1,7 @@
+$fa-font-path: '/static/fonts/font-awesome';
+
+@import "~font-awesome/scss/font-awesome";
+
 @import "theme/variables";
 @import "theme/spectre-icons";
 @import "theme/spectre";

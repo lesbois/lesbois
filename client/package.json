@@ -19,6 +19,7 @@
     "babel-preset-react": "^6.24.1",
     "cors": "^2.8.4",
     "css-loader": "^0.28.7",
+    "font-awesome": "^4.7.0",
     "node-sass": "^4.5.3",
     "react-hot-loader": "next",
     "sass-loader": "^6.0.6",
@@ -29,6 +30,7 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "jump.js": "^1.0.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
