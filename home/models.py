@@ -50,7 +50,8 @@ class PageSection(Page):
         return tmp_data
 
     def get_image_url(self, image):
-        return Image.objects.get(pk=image).file.url
+        obj = Image.objects.get(pk=image)
+        return obj.file.url
 
     def transform_gallery(self, gallery):
         gal_arr = []
