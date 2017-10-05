@@ -8,6 +8,7 @@
 
 {% block extra_js %}
     <script type="text/javascript">
+    console.log(JSON.parse('{{ data_json | safe }}'))
         app.useClient({
             token: '{{ csrf_token }}',
             json_data: JSON.parse('{{ data_json | safe }}')

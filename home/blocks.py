@@ -12,7 +12,8 @@ class GalleryBlock(blocks.StructBlock):
 
 
 class StylingBlock(blocks.StructBlock):
-    container_css = blocks.CharBlock(required=False, label="CSS")
+    container_id = blocks.CharBlock(required=False, label="Container's ID")
+    container_css = blocks.CharBlock(required=False, label="Container's CSS")
     background_image = ImageChooserBlock(required=False)
 
     class Meta:
