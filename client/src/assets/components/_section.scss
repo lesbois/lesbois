@@ -1,4 +1,5 @@
 .section {
+    padding: 10% 0 0;
     .title {
         font-family: MontserratBold;
         font-size: 83.7px;
@@ -17,5 +18,30 @@
               left: 0;
               right: 0;
         }
+    }
+    h3 {
+        font-family: Montserrat;
+        font-weight: normal;
+        font-size: 30px;
+        margin: 15px 0 25px 0;
+    }
+    &-about {
+        font-family: Montserrat;
+        font-size: 22.2px;
+        line-height: 1.19;
+        letter-spacing: 1.6px;
+        color: #424c5c;
+        margin-bottom: 2em !important;
+    }
+    &-grid-centered {
+        text-align: center;
+    }
+    &-line-util {
+        line-height: 7;
+    }
+    p {
+        letter-spacing: 0.9px;
+        color: #7e8899;
+        line-height: 2.33;
     }
 }

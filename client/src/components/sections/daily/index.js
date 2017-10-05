@@ -6,7 +6,7 @@ class Daily extends Component {
         return (
             <div id="daily" className="section">
                 <div className="container grid-lg">
-                    <h1 className="title">DAILY</h1>
+                    <h1 className="title text-center">DAILY</h1>
 
                     <div className="columns">
                         <div className="column col-xs-3">

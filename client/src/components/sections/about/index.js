@@ -7,7 +7,7 @@ class About extends Component {
                 <div className="container grid-lg">
                     <h1 className="title text-center">ABOUT</h1>
 
-                    <h3>LES BOIS ENGINEERING INNOVATIONS</h3>
+                    <h3 className="text-center section-about">LES BOIS ENGINEERING INNOVATIONS</h3>
 
                     <p>
                         We are an outsourcing company focusing on Website
