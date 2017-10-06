@@ -5,12 +5,20 @@
 {% block content %}
     <div id="app"></div>
 {% endblock %}
-
 {% block extra_js %}
-    <script type="text/javascript">
-        app.useClient({
-            token: '{{ csrf_token }}',
-            sections: JSON.parse('{{ data_json | safe }}')
-        }, 'app')
-    </script>
+    {% if data_json %}
+            <script type="text/javascript">
+                app.useClient({
+                    token: '{{ csrf_token }}',
+                    sections: JSON.parse('{{ data_json | safe }}')
+                }, 'app')
+            </script>
+
+    {% else %}
+            <script type="text/javascript">
+                app.useClient({
+                    token: '{{ csrf_token }}'
+                }, 'app')
+            </script>
+    {% endif%}
 {% endblock %}

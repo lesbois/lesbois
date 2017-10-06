@@ -57,9 +57,6 @@ class Home extends Component {
     render() {
         const { props } = this
         const { screens } = props
-
-        console.log(props)
-
         return(
             <div className="home">
                 <Navigation
@@ -67,7 +64,7 @@ class Home extends Component {
                     menu={menuSettings} />
                 <Jumbotron />
 
-                <UseSectionProps sections={props.sections} />
+                { props.sections ? <UseSectionProps sections={props.sections} /> : null }
 
                 <Footer />
             </div>
