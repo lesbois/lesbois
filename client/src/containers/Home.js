@@ -58,6 +58,8 @@ class Home extends Component {
         const { props } = this
         const { screens } = props
 
+        console.log(props)
+
         return(
             <div className="home">
                 <Navigation

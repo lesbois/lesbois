@@ -1661,7 +1661,7 @@ SELECT pg_catalog.setval('auth_permission_id_seq', 91, true);
 --
 
 COPY auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
-1	pbkdf2_sha256$36000$H2vYGSZMggdQ$3DbO81s6C+VBTNTqyT9/R9TqfUg8SfFiMGeRsZp6OXw=	2017-10-06 13:36:06.836816+08	t	admin			admin@admin.com	t	t	2017-10-06 13:34:00.111351+08
+1	pbkdf2_sha256$36000$pki7ifOM8nSD$l/s/2CQV7EMkgOtRg1ycRZR1hRvBZT5bmpch3Bw/fmo=	2017-10-06 16:51:53.418169+08	t	admin			admin@admin.com	t	t	2017-10-06 16:51:34.599014+08
 \.
 
 
@@ -1707,6 +1707,7 @@ SELECT pg_catalog.setval('auth_user_user_permissions_id_seq', 1, false);
 --
 
 COPY blog_blog (page_ptr_id, intro) FROM stdin;
+4	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales.</p>
 \.
 
 
@@ -1715,6 +1716,8 @@ COPY blog_blog (page_ptr_id, intro) FROM stdin;
 --
 
 COPY blog_blogpage (page_ptr_id, body, date, intro, cover) FROM stdin;
+5	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales. Pellentesque aliquam lectus elit, quis viverra tortor tincidunt non. Nulla facilisi. In hac habitasse platea dictumst. Pellentesque dolor justo, auctor non pretium a, convallis quis sem. Maecenas vitae efficitur risus. Phasellus vel scelerisque enim, iaculis tempor ex. Donec bibendum libero lorem, sit amet eleifend tellus venenatis eu. Donec dolor purus, maximus vitae posuere nec, consectetur in justo.</p><p>Pellentesque porta in nisl eu mattis. Aenean eu feugiat lacus, sed vestibulum odio. Nunc sodales rhoncus eleifend. Nullam eu orci nunc. Fusce felis urna, tincidunt quis nisl id, porta vehicula eros. Suspendisse varius est id sem sodales, nec imperdiet purus dictum. Proin nec nisi nec augue sagittis condimentum at gravida erat. Proin elementum sit amet orci id malesuada. Nullam tincidunt semper felis, sed ultricies est. Vestibulum ornare lectus in ultricies suscipit. Sed sed maximus lacus. Duis tempus nulla et malesuada blandit. Vestibulum urna arcu, ullamcorper ut libero a, semper malesuada ante. Vivamus in porta sem. Integer gravida mattis lectus sit amet efficitur. Vivamus luctus et elit sit amet aliquam.</p><p>Etiam tempor urna lobortis mattis viverra. Donec scelerisque leo risus, eu euismod massa fermentum non. Vivamus erat mauris, ultricies id ante sed, convallis tincidunt sem. Donec sit amet augue mi. Maecenas et est augue. Nullam suscipit dignissim sem in posuere. Nunc rutrum libero ut suscipit varius. Etiam porttitor, magna vitae placerat vestibulum, nisl neque posuere mi, nec pharetra ipsum elit ac risus. Sed nisl nisl, interdum et purus ut, bibendum ullamcorper erat. Etiam nec urna ac diam posuere laoreet. Nulla sed ex diam. Sed quam justo, tristique quis tempor at, fermentum vitae mauris. Phasellus vel lacus bibendum, viverra elit quis, dictum nisl. Etiam sed velit lorem. Nam bibendum congue justo, vitae sodales metus sagittis quis.</p><p>Vivamus tincidunt nisi et augue suscipit, ac commodo erat pulvinar. Praesent non dictum velit, scelerisque ullamcorper purus. Nam eget euismod velit. Aliquam accumsan eros et ultricies pharetra. Morbi tristique erat at turpis commodo tempus. Fusce ultrices convallis ex. Nulla viverra libero id laoreet ornare. In tincidunt ac dui vitae finibus. Vivamus sit amet leo ante. Phasellus ut mauris mi. Phasellus lacinia enim non nunc porta venenatis. Morbi ut vehicula est. Curabitur quis convallis ex. Aliquam fermentum sollicitudin sodales. Vivamus at fringilla nunc. Etiam vel vestibulum eros, ac pharetra augue.</p><p>Suspendisse potenti. Curabitur eleifend sit amet orci vitae semper. In lobortis nisi a nulla venenatis vestibulum vel a ligula. Sed ac magna non orci molestie congue. Donec sagittis venenatis velit nec maximus. Mauris sapien dolor, pretium sit amet mollis vel, malesuada vitae risus. Curabitur mollis tellus lorem, sit amet faucibus libero convallis in. Fusce lobortis felis sed nibh euismod, at congue urna eleifend. Sed gravida ante a cursus dictum. Nulla vel quam nec tortor congue sagittis.</p>	2017-10-06	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales.	33
+6	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales. Pellentesque aliquam lectus elit, quis viverra tortor tincidunt non. Nulla facilisi. In hac habitasse platea dictumst. Pellentesque dolor justo, auctor non pretium a, convallis quis sem. Maecenas vitae efficitur risus. Phasellus vel scelerisque enim, iaculis tempor ex. Donec bibendum libero lorem, sit amet eleifend tellus venenatis eu. Donec dolor purus, maximus vitae posuere nec, consectetur in justo.</p><p>Pellentesque porta in nisl eu mattis. Aenean eu feugiat lacus, sed vestibulum odio. Nunc sodales rhoncus eleifend. Nullam eu orci nunc. Fusce felis urna, tincidunt quis nisl id, porta vehicula eros. Suspendisse varius est id sem sodales, nec imperdiet purus dictum. Proin nec nisi nec augue sagittis condimentum at gravida erat. Proin elementum sit amet orci id malesuada. Nullam tincidunt semper felis, sed ultricies est. Vestibulum ornare lectus in ultricies suscipit. Sed sed maximus lacus. Duis tempus nulla et malesuada blandit. Vestibulum urna arcu, ullamcorper ut libero a, semper malesuada ante. Vivamus in porta sem. Integer gravida mattis lectus sit amet efficitur. Vivamus luctus et elit sit amet aliquam.</p>	2017-10-06	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales.	35
 \.
 
 
@@ -1723,6 +1726,9 @@ COPY blog_blogpage (page_ptr_id, body, date, intro, cover) FROM stdin;
 --
 
 COPY blog_blogpagegalleryimage (id, sort_order, caption, image_id, page_id) FROM stdin;
+3	0		29	6
+1	0		29	5
+2	1		31	5
 \.
 
 
@@ -1730,7 +1736,7 @@ COPY blog_blogpagegalleryimage (id, sort_order, caption, image_id, page_id) FROM
 -- Name: blog_blogpagegalleryimage_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('blog_blogpagegalleryimage_id_seq', 1, false);
+SELECT pg_catalog.setval('blog_blogpagegalleryimage_id_seq', 3, true);
 
 
 --
@@ -1799,118 +1805,118 @@ SELECT pg_catalog.setval('django_content_type_id_seq', 31, true);
 --
 
 COPY django_migrations (id, app, name, applied) FROM stdin;
-1	contenttypes	0001_initial	2017-10-06 13:33:46.047893+08
-2	auth	0001_initial	2017-10-06 13:33:46.083004+08
-3	admin	0001_initial	2017-10-06 13:33:46.097276+08
-4	admin	0002_logentry_remove_auto_add	2017-10-06 13:33:46.105187+08
-5	contenttypes	0002_remove_content_type_name	2017-10-06 13:33:46.120927+08
-6	auth	0002_alter_permission_name_max_length	2017-10-06 13:33:46.125327+08
-7	auth	0003_alter_user_email_max_length	2017-10-06 13:33:46.13312+08
-8	auth	0004_alter_user_username_opts	2017-10-06 13:33:46.139634+08
-9	auth	0005_alter_user_last_login_null	2017-10-06 13:33:46.147601+08
-10	auth	0006_require_contenttypes_0002	2017-10-06 13:33:46.148843+08
-11	auth	0007_alter_validators_add_error_messages	2017-10-06 13:33:46.155517+08
-12	auth	0008_alter_user_username_max_length	2017-10-06 13:33:46.165909+08
-13	taggit	0001_initial	2017-10-06 13:33:46.183142+08
-14	wagtailimages	0001_initial	2017-10-06 13:33:46.219211+08
-15	wagtailcore	0001_initial	2017-10-06 13:33:46.385521+08
-16	wagtailcore	0002_initial_data	2017-10-06 13:33:46.386565+08
-17	wagtailcore	0003_add_uniqueness_constraint_on_group_page_permission	2017-10-06 13:33:46.387557+08
-18	wagtailcore	0004_page_locked	2017-10-06 13:33:46.388444+08
-19	wagtailcore	0005_add_page_lock_permission_to_moderators	2017-10-06 13:33:46.389316+08
-20	wagtailcore	0006_add_lock_page_permission	2017-10-06 13:33:46.390198+08
-21	wagtailcore	0007_page_latest_revision_created_at	2017-10-06 13:33:46.391104+08
-22	wagtailcore	0008_populate_latest_revision_created_at	2017-10-06 13:33:46.391959+08
-23	wagtailcore	0009_remove_auto_now_add_from_pagerevision_created_at	2017-10-06 13:33:46.392833+08
-24	wagtailcore	0010_change_page_owner_to_null_on_delete	2017-10-06 13:33:46.393717+08
-25	wagtailcore	0011_page_first_published_at	2017-10-06 13:33:46.394567+08
-26	wagtailcore	0012_extend_page_slug_field	2017-10-06 13:33:46.395374+08
-27	wagtailcore	0013_update_golive_expire_help_text	2017-10-06 13:33:46.396217+08
-28	wagtailcore	0014_add_verbose_name	2017-10-06 13:33:46.397073+08
-29	wagtailcore	0015_add_more_verbose_names	2017-10-06 13:33:46.397933+08
-30	wagtailcore	0016_change_page_url_path_to_text_field	2017-10-06 13:33:46.398787+08
-31	wagtailimages	0002_initial_data	2017-10-06 13:33:46.422878+08
-32	wagtailimages	0003_fix_focal_point_fields	2017-10-06 13:33:46.460682+08
-33	wagtailimages	0004_make_focal_point_key_not_nullable	2017-10-06 13:33:46.483152+08
-34	wagtailimages	0005_make_filter_spec_unique	2017-10-06 13:33:46.494293+08
-35	wagtailimages	0006_add_verbose_names	2017-10-06 13:33:46.533907+08
-36	wagtailimages	0007_image_file_size	2017-10-06 13:33:46.545031+08
-37	wagtailimages	0008_image_created_at_index	2017-10-06 13:33:46.55747+08
-38	wagtailimages	0009_capitalizeverbose	2017-10-06 13:33:46.629775+08
-39	wagtailimages	0010_change_on_delete_behaviour	2017-10-06 13:33:46.64395+08
-40	wagtailcore	0017_change_edit_page_permission_description	2017-10-06 13:33:46.653218+08
-41	wagtailcore	0018_pagerevision_submitted_for_moderation_index	2017-10-06 13:33:46.663865+08
-42	wagtailcore	0019_verbose_names_cleanup	2017-10-06 13:33:46.705307+08
-43	wagtailcore	0020_add_index_on_page_first_published_at	2017-10-06 13:33:46.716467+08
-44	wagtailcore	0021_capitalizeverbose	2017-10-06 13:33:47.006083+08
-45	wagtailcore	0022_add_site_name	2017-10-06 13:33:47.015166+08
-46	wagtailcore	0023_alter_page_revision_on_delete_behaviour	2017-10-06 13:33:47.028155+08
-47	wagtailcore	0024_collection	2017-10-06 13:33:47.036643+08
-48	wagtailcore	0025_collection_initial_data	2017-10-06 13:33:47.053827+08
-49	wagtailcore	0026_group_collection_permission	2017-10-06 13:33:47.081615+08
-50	wagtailimages	0011_image_collection	2017-10-06 13:33:47.103451+08
-51	wagtailimages	0012_copy_image_permissions_to_collections	2017-10-06 13:33:47.126796+08
-52	wagtailimages	0013_make_rendition_upload_callable	2017-10-06 13:33:47.135998+08
-53	wagtailimages	0014_add_filter_spec_field	2017-10-06 13:33:47.166746+08
-54	wagtailimages	0015_fill_filter_spec_field	2017-10-06 13:33:47.182379+08
-55	wagtailimages	0016_deprecate_rendition_filter_relation	2017-10-06 13:33:47.212927+08
-56	wagtailimages	0017_reduce_focal_point_key_max_length	2017-10-06 13:33:47.225984+08
-57	wagtailimages	0018_remove_rendition_filter	2017-10-06 13:33:47.243342+08
-58	wagtailimages	0019_delete_filter	2017-10-06 13:33:47.248093+08
-59	wagtailcore	0027_fix_collection_path_collation	2017-10-06 13:33:47.263899+08
-60	wagtailcore	0024_alter_page_content_type_on_delete_behaviour	2017-10-06 13:33:47.284033+08
-61	wagtailcore	0028_merge	2017-10-06 13:33:47.285369+08
-62	wagtailcore	0029_unicode_slugfield_dj19	2017-10-06 13:33:47.300797+08
-63	wagtailcore	0030_index_on_pagerevision_created_at	2017-10-06 13:33:47.312418+08
-64	wagtailcore	0031_add_page_view_restriction_types	2017-10-06 13:33:47.358053+08
-65	wagtailcore	0032_add_bulk_delete_page_permission	2017-10-06 13:33:47.369128+08
-66	wagtailcore	0033_remove_golive_expiry_help_text	2017-10-06 13:33:47.419683+08
-67	wagtailcore	0034_page_live_revision	2017-10-06 13:33:47.432269+08
-68	wagtailcore	0035_page_last_published_at	2017-10-06 13:33:47.445289+08
-69	wagtailcore	0036_populate_page_last_published_at	2017-10-06 13:33:47.464095+08
-70	wagtailcore	0037_set_page_owner_editable	2017-10-06 13:33:47.478379+08
-71	wagtailcore	0038_make_first_published_at_editable	2017-10-06 13:33:47.489292+08
-72	wagtailcore	0039_collectionviewrestriction	2017-10-06 13:33:47.534523+08
-73	wagtailcore	0040_page_draft_title	2017-10-06 13:33:47.570439+08
-74	blog	0001_initial	2017-10-06 13:33:47.589526+08
-75	blog	0002_auto_20171006_0215	2017-10-06 13:33:47.623702+08
-76	blog	0003_auto_20171006_0224	2017-10-06 13:33:47.64414+08
-77	blog	0004_auto_20171006_0228	2017-10-06 13:33:47.666211+08
-78	blog	0005_auto_20171006_0533	2017-10-06 13:33:47.720064+08
-79	home	0001_initial	2017-10-06 13:33:47.761023+08
-80	home	0002_auto_20171006_0140	2017-10-06 13:33:47.773686+08
-81	sessions	0001_initial	2017-10-06 13:33:47.779407+08
-82	taggit	0002_auto_20150616_2121	2017-10-06 13:33:47.7875+08
-83	wagtailadmin	0001_create_admin_access_permissions	2017-10-06 13:33:47.817415+08
-84	wagtaildocs	0001_initial	2017-10-06 13:33:47.836486+08
-85	wagtaildocs	0002_initial_data	2017-10-06 13:33:47.868811+08
-86	wagtaildocs	0003_add_verbose_names	2017-10-06 13:33:47.911156+08
-87	wagtaildocs	0004_capitalizeverbose	2017-10-06 13:33:48.014356+08
-88	wagtaildocs	0005_document_collection	2017-10-06 13:33:48.033668+08
-89	wagtaildocs	0006_copy_document_permissions_to_collections	2017-10-06 13:33:48.063862+08
-90	wagtaildocs	0005_alter_uploaded_by_user_on_delete_action	2017-10-06 13:33:48.081413+08
-91	wagtaildocs	0007_merge	2017-10-06 13:33:48.083974+08
-92	wagtailembeds	0001_initial	2017-10-06 13:33:48.092912+08
-93	wagtailembeds	0002_add_verbose_names	2017-10-06 13:33:48.096362+08
-94	wagtailembeds	0003_capitalizeverbose	2017-10-06 13:33:48.101255+08
-95	wagtailforms	0001_initial	2017-10-06 13:33:48.122266+08
-96	wagtailforms	0002_add_verbose_names	2017-10-06 13:33:48.140964+08
-97	wagtailforms	0003_capitalizeverbose	2017-10-06 13:33:48.157829+08
-98	wagtailredirects	0001_initial	2017-10-06 13:33:48.184869+08
-99	wagtailredirects	0002_add_verbose_names	2017-10-06 13:33:48.226206+08
-100	wagtailredirects	0003_make_site_field_editable	2017-10-06 13:33:48.250224+08
-101	wagtailredirects	0004_set_unique_on_path_and_site	2017-10-06 13:33:48.282475+08
-102	wagtailredirects	0005_capitalizeverbose	2017-10-06 13:33:48.375472+08
-103	wagtailsearch	0001_initial	2017-10-06 13:33:48.436292+08
-104	wagtailsearch	0002_add_verbose_names	2017-10-06 13:33:48.492962+08
-105	wagtailsearch	0003_remove_editors_pick	2017-10-06 13:33:48.517535+08
-106	wagtailusers	0001_initial	2017-10-06 13:33:48.543048+08
-107	wagtailusers	0002_add_verbose_name_on_userprofile	2017-10-06 13:33:48.61659+08
-108	wagtailusers	0003_add_verbose_names	2017-10-06 13:33:48.628144+08
-109	wagtailusers	0004_capitalizeverbose	2017-10-06 13:33:48.672308+08
-110	wagtailusers	0005_make_related_name_wagtail_specific	2017-10-06 13:33:48.68958+08
-111	wagtailusers	0006_userprofile_prefered_language	2017-10-06 13:33:48.705986+08
-112	wagtailcore	0001_squashed_0016_change_page_url_path_to_text_field	2017-10-06 13:33:48.708139+08
+1	contenttypes	0001_initial	2017-10-06 16:51:13.674355+08
+2	auth	0001_initial	2017-10-06 16:51:13.710898+08
+3	admin	0001_initial	2017-10-06 16:51:13.725709+08
+4	admin	0002_logentry_remove_auto_add	2017-10-06 16:51:13.733499+08
+5	contenttypes	0002_remove_content_type_name	2017-10-06 16:51:13.749681+08
+6	auth	0002_alter_permission_name_max_length	2017-10-06 16:51:13.755313+08
+7	auth	0003_alter_user_email_max_length	2017-10-06 16:51:13.763451+08
+8	auth	0004_alter_user_username_opts	2017-10-06 16:51:13.772767+08
+9	auth	0005_alter_user_last_login_null	2017-10-06 16:51:13.780479+08
+10	auth	0006_require_contenttypes_0002	2017-10-06 16:51:13.781542+08
+11	auth	0007_alter_validators_add_error_messages	2017-10-06 16:51:13.78859+08
+12	auth	0008_alter_user_username_max_length	2017-10-06 16:51:13.800096+08
+13	taggit	0001_initial	2017-10-06 16:51:13.821376+08
+14	wagtailimages	0001_initial	2017-10-06 16:51:13.856787+08
+15	wagtailcore	0001_initial	2017-10-06 16:51:14.170074+08
+16	wagtailcore	0002_initial_data	2017-10-06 16:51:14.171517+08
+17	wagtailcore	0003_add_uniqueness_constraint_on_group_page_permission	2017-10-06 16:51:14.172644+08
+18	wagtailcore	0004_page_locked	2017-10-06 16:51:14.173683+08
+19	wagtailcore	0005_add_page_lock_permission_to_moderators	2017-10-06 16:51:14.17489+08
+20	wagtailcore	0006_add_lock_page_permission	2017-10-06 16:51:14.176003+08
+21	wagtailcore	0007_page_latest_revision_created_at	2017-10-06 16:51:14.176936+08
+22	wagtailcore	0008_populate_latest_revision_created_at	2017-10-06 16:51:14.177939+08
+23	wagtailcore	0009_remove_auto_now_add_from_pagerevision_created_at	2017-10-06 16:51:14.17892+08
+24	wagtailcore	0010_change_page_owner_to_null_on_delete	2017-10-06 16:51:14.179819+08
+25	wagtailcore	0011_page_first_published_at	2017-10-06 16:51:14.18069+08
+26	wagtailcore	0012_extend_page_slug_field	2017-10-06 16:51:14.18153+08
+27	wagtailcore	0013_update_golive_expire_help_text	2017-10-06 16:51:14.182371+08
+28	wagtailcore	0014_add_verbose_name	2017-10-06 16:51:14.183186+08
+29	wagtailcore	0015_add_more_verbose_names	2017-10-06 16:51:14.184002+08
+30	wagtailcore	0016_change_page_url_path_to_text_field	2017-10-06 16:51:14.18481+08
+31	wagtailimages	0002_initial_data	2017-10-06 16:51:14.210021+08
+32	wagtailimages	0003_fix_focal_point_fields	2017-10-06 16:51:14.247485+08
+33	wagtailimages	0004_make_focal_point_key_not_nullable	2017-10-06 16:51:14.270944+08
+34	wagtailimages	0005_make_filter_spec_unique	2017-10-06 16:51:14.279092+08
+35	wagtailimages	0006_add_verbose_names	2017-10-06 16:51:14.317854+08
+36	wagtailimages	0007_image_file_size	2017-10-06 16:51:14.329882+08
+37	wagtailimages	0008_image_created_at_index	2017-10-06 16:51:14.341848+08
+38	wagtailimages	0009_capitalizeverbose	2017-10-06 16:51:14.413317+08
+39	wagtailimages	0010_change_on_delete_behaviour	2017-10-06 16:51:14.427318+08
+40	wagtailcore	0017_change_edit_page_permission_description	2017-10-06 16:51:14.43692+08
+41	wagtailcore	0018_pagerevision_submitted_for_moderation_index	2017-10-06 16:51:14.448193+08
+42	wagtailcore	0019_verbose_names_cleanup	2017-10-06 16:51:14.485451+08
+43	wagtailcore	0020_add_index_on_page_first_published_at	2017-10-06 16:51:14.49684+08
+44	wagtailcore	0021_capitalizeverbose	2017-10-06 16:51:14.778711+08
+45	wagtailcore	0022_add_site_name	2017-10-06 16:51:14.787881+08
+46	wagtailcore	0023_alter_page_revision_on_delete_behaviour	2017-10-06 16:51:14.801408+08
+47	wagtailcore	0024_collection	2017-10-06 16:51:14.808222+08
+48	wagtailcore	0025_collection_initial_data	2017-10-06 16:51:14.823425+08
+49	wagtailcore	0026_group_collection_permission	2017-10-06 16:51:14.847708+08
+50	wagtailimages	0011_image_collection	2017-10-06 16:51:14.868664+08
+51	wagtailimages	0012_copy_image_permissions_to_collections	2017-10-06 16:51:14.889972+08
+52	wagtailimages	0013_make_rendition_upload_callable	2017-10-06 16:51:14.897722+08
+53	wagtailimages	0014_add_filter_spec_field	2017-10-06 16:51:14.927701+08
+54	wagtailimages	0015_fill_filter_spec_field	2017-10-06 16:51:14.94295+08
+55	wagtailimages	0016_deprecate_rendition_filter_relation	2017-10-06 16:51:14.969867+08
+56	wagtailimages	0017_reduce_focal_point_key_max_length	2017-10-06 16:51:14.982453+08
+57	wagtailimages	0018_remove_rendition_filter	2017-10-06 16:51:14.99984+08
+58	wagtailimages	0019_delete_filter	2017-10-06 16:51:15.003563+08
+59	wagtailcore	0027_fix_collection_path_collation	2017-10-06 16:51:15.020176+08
+60	wagtailcore	0024_alter_page_content_type_on_delete_behaviour	2017-10-06 16:51:15.038905+08
+61	wagtailcore	0028_merge	2017-10-06 16:51:15.040402+08
+62	wagtailcore	0029_unicode_slugfield_dj19	2017-10-06 16:51:15.051518+08
+63	wagtailcore	0030_index_on_pagerevision_created_at	2017-10-06 16:51:15.06427+08
+64	wagtailcore	0031_add_page_view_restriction_types	2017-10-06 16:51:15.106503+08
+65	wagtailcore	0032_add_bulk_delete_page_permission	2017-10-06 16:51:15.118028+08
+66	wagtailcore	0033_remove_golive_expiry_help_text	2017-10-06 16:51:15.168948+08
+67	wagtailcore	0034_page_live_revision	2017-10-06 16:51:15.181503+08
+68	wagtailcore	0035_page_last_published_at	2017-10-06 16:51:15.193121+08
+69	wagtailcore	0036_populate_page_last_published_at	2017-10-06 16:51:15.210513+08
+70	wagtailcore	0037_set_page_owner_editable	2017-10-06 16:51:15.2248+08
+71	wagtailcore	0038_make_first_published_at_editable	2017-10-06 16:51:15.235781+08
+72	wagtailcore	0039_collectionviewrestriction	2017-10-06 16:51:15.281046+08
+73	wagtailcore	0040_page_draft_title	2017-10-06 16:51:15.323635+08
+74	blog	0001_initial	2017-10-06 16:51:15.346326+08
+75	blog	0002_auto_20171006_0215	2017-10-06 16:51:15.379595+08
+76	blog	0003_auto_20171006_0224	2017-10-06 16:51:15.406449+08
+77	blog	0004_auto_20171006_0228	2017-10-06 16:51:15.428372+08
+78	blog	0005_auto_20171006_0533	2017-10-06 16:51:15.488543+08
+79	home	0001_initial	2017-10-06 16:51:15.528874+08
+80	home	0002_auto_20171006_0140	2017-10-06 16:51:15.545182+08
+81	sessions	0001_initial	2017-10-06 16:51:15.551005+08
+82	taggit	0002_auto_20150616_2121	2017-10-06 16:51:15.559765+08
+83	wagtailadmin	0001_create_admin_access_permissions	2017-10-06 16:51:15.593307+08
+84	wagtaildocs	0001_initial	2017-10-06 16:51:15.613087+08
+85	wagtaildocs	0002_initial_data	2017-10-06 16:51:15.648397+08
+86	wagtaildocs	0003_add_verbose_names	2017-10-06 16:51:15.691863+08
+87	wagtaildocs	0004_capitalizeverbose	2017-10-06 16:51:15.802347+08
+88	wagtaildocs	0005_document_collection	2017-10-06 16:51:15.821932+08
+89	wagtaildocs	0006_copy_document_permissions_to_collections	2017-10-06 16:51:15.854321+08
+90	wagtaildocs	0005_alter_uploaded_by_user_on_delete_action	2017-10-06 16:51:15.874069+08
+91	wagtaildocs	0007_merge	2017-10-06 16:51:15.875163+08
+92	wagtailembeds	0001_initial	2017-10-06 16:51:15.888202+08
+93	wagtailembeds	0002_add_verbose_names	2017-10-06 16:51:15.891993+08
+94	wagtailembeds	0003_capitalizeverbose	2017-10-06 16:51:15.89531+08
+95	wagtailforms	0001_initial	2017-10-06 16:51:15.915711+08
+96	wagtailforms	0002_add_verbose_names	2017-10-06 16:51:15.931776+08
+97	wagtailforms	0003_capitalizeverbose	2017-10-06 16:51:15.951276+08
+98	wagtailredirects	0001_initial	2017-10-06 16:51:15.979442+08
+99	wagtailredirects	0002_add_verbose_names	2017-10-06 16:51:16.01983+08
+100	wagtailredirects	0003_make_site_field_editable	2017-10-06 16:51:16.050253+08
+101	wagtailredirects	0004_set_unique_on_path_and_site	2017-10-06 16:51:16.080702+08
+102	wagtailredirects	0005_capitalizeverbose	2017-10-06 16:51:16.185334+08
+103	wagtailsearch	0001_initial	2017-10-06 16:51:16.248535+08
+104	wagtailsearch	0002_add_verbose_names	2017-10-06 16:51:16.308459+08
+105	wagtailsearch	0003_remove_editors_pick	2017-10-06 16:51:16.33382+08
+106	wagtailusers	0001_initial	2017-10-06 16:51:16.362819+08
+107	wagtailusers	0002_add_verbose_name_on_userprofile	2017-10-06 16:51:16.460899+08
+108	wagtailusers	0003_add_verbose_names	2017-10-06 16:51:16.47156+08
+109	wagtailusers	0004_capitalizeverbose	2017-10-06 16:51:16.517707+08
+110	wagtailusers	0005_make_related_name_wagtail_specific	2017-10-06 16:51:16.539441+08
+111	wagtailusers	0006_userprofile_prefered_language	2017-10-06 16:51:16.557975+08
+112	wagtailcore	0001_squashed_0016_change_page_url_path_to_text_field	2017-10-06 16:51:16.560034+08
 \.
 
 
@@ -1926,7 +1932,7 @@ SELECT pg_catalog.setval('django_migrations_id_seq', 112, true);
 --
 
 COPY django_session (session_key, session_data, expire_date) FROM stdin;
-ltak2mea5rj7pgj5e8hdb7c9gkl43xz3	MWY2Njg3YTY1NGY3YWM3NTIyMGMwMDZlNjJhOWI1MjE0NTE5ZmNjYjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1OWQwYjFhZmFhMGYxNTAyYjUyNGYyZTQ0MTUzNGIyOWQ4NmQ0Yzc3In0=	2017-10-20 13:36:06.839057+08
+h5tys0ylj20ainzi5msdrylbdkvp7ca5	NmY1ZmEzYzliMzRhY2MyMDFjZWE3NGVlODg0MzA4OWE5NTc2ZjgwZDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIyNGY3YTJkMjU4YmY2NGZhM2ZmMDkzOGY1ZmE2NjlmZmY4NzliMmExIn0=	2017-10-20 16:51:53.420336+08
 \.
 
 
@@ -1935,7 +1941,6 @@ ltak2mea5rj7pgj5e8hdb7c9gkl43xz3	MWY2Njg3YTY1NGY3YWM3NTIyMGMwMDZlNjJhOWI1MjE0NTE
 --
 
 COPY home_homepage (page_ptr_id) FROM stdin;
-3
 \.
 
 
@@ -1944,6 +1949,7 @@ COPY home_homepage (page_ptr_id) FROM stdin;
 --
 
 COPY home_pagesection (page_ptr_id, body) FROM stdin;
+3	[{"type": "section", "value": {"heading": "What We Do", "sub_heading": "", "body": "", "styling": {"container_id": "", "container_css": "", "background_image": null}, "gallery": [{"title": "Engineering", "caption": "Keeping pace with the latest in technology yet ensuring the right tools for the job.", "image": 9}, {"title": "Development", "caption": "Keeping pace with the latest in technology yet ensuring the right tools for the job.", "image": 7}, {"title": "Design", "caption": "Keeping pace with the latest in technology yet ensuring the right tools for the job.", "image": 6}]}, "id": "5834a5bf-5dca-4a02-908f-d6a997476272"}, {"type": "section", "value": {"heading": "About", "sub_heading": "LES BOIS ENGINEERING INNOVATIONS", "body": "We are an outsourcing company focusing on Website Development and Engineering Solutions for Electronics and Electrical Engineers. We develop and maintain the website and collaborate with Engineers all over the world on projects, articles and educational sources. We will be promoting related products and embed it on projects, publish technical articles that will be useful for electronics designers and engineers and becomes a source of all information for new designs, projects, and new technology.", "styling": {"container_id": "", "container_css": "", "background_image": null}, "gallery": [{"title": "", "caption": "", "image": null}]}, "id": "c559dbbc-35b1-428a-b5ae-dcbd21a45f67"}, {"type": "section", "value": {"heading": "Meet The Team", "sub_heading": "", "body": "", "styling": {"container_id": "", "container_css": "", "background_image": null}, "gallery": [{"title": "ADAM", "caption": "The Boss", "image": 3}, {"title": "ROB", "caption": "The Other Boss", "image": 29}, {"title": "RIZA", "caption": "The Manager", "image": 27}, {"title": "GLEN", "caption": "The Senior Dev", "image": 11}, {"title": "ROLAND", "caption": "The Hackerman", "image": 31}, {"title": "GOPER", "caption": "Goofy Developer", "image": 13}, {"title": "MARK", "caption": "Random Developer", "image": 23}, {"title": "JEREMY", "caption": "The Backend Guy", "image": 16}, {"title": "PHILIP", "caption": "The Design Guy", "image": 25}, {"title": "KIN", "caption": "The Python Tamer", "image": 19}, {"title": "JOSE", "caption": "Frontend Pope", "image": 18}, {"title": "CLEM", "caption": "Video Guy", "image": 5}]}, "id": "d897f7c3-edf3-494f-8de3-7137a26bfc2b"}, {"type": "section", "value": {"heading": "Partners", "sub_heading": "", "body": "", "styling": {"container_id": "", "container_css": "", "background_image": null}, "gallery": [{"title": "", "caption": "", "image": 8}, {"title": "", "caption": "", "image": 1}, {"title": "", "caption": "", "image": 14}]}, "id": "af3ea5a5-c2db-46ea-bccd-58fa328d0450"}, {"type": "section", "value": {"heading": "Daily", "sub_heading": "", "body": "", "styling": {"container_id": "", "container_css": "", "background_image": null}, "gallery": [{"title": "", "caption": "", "image": 31}, {"title": "", "caption": "", "image": 27}, {"title": "", "caption": "", "image": 23}, {"title": "", "caption": "", "image": 25}, {"title": "", "caption": "", "image": 29}, {"title": "", "caption": "", "image": 16}, {"title": "", "caption": "", "image": 19}, {"title": "", "caption": "", "image": 11}]}, "id": "b07bf240-745a-444b-9a37-fe7fc9cce5ad"}]
 \.
 
 
@@ -2074,7 +2080,10 @@ SELECT pg_catalog.setval('wagtailcore_grouppagepermission_id_seq', 6, true);
 COPY wagtailcore_page (id, path, depth, numchild, title, slug, live, has_unpublished_changes, url_path, seo_title, show_in_menus, search_description, go_live_at, expire_at, expired, content_type_id, owner_id, locked, latest_revision_created_at, first_published_at, live_revision_id, last_published_at, draft_title) FROM stdin;
 1	0001	1	1	Root	root	t	f	/		f		\N	\N	f	1	\N	f	\N	\N	\N	\N	Root
 2	00010001	2	1	Welcome to your new Wagtail site!	home	t	f	/home/		f		\N	\N	f	1	\N	f	\N	\N	\N	\N	Welcome to your new Wagtail site!
-3	000100010001	3	0	Home	home	t	f	/home/home/		f		\N	\N	f	5	1	f	2017-10-06 13:36:34.960221+08	2017-10-06 13:36:34.970203+08	1	2017-10-06 13:36:34.970203+08	Home
+3	000100010001	3	1	Home	home	t	f	/home/home/		f		\N	\N	f	6	1	f	2017-10-06 17:17:50.063068+08	2017-10-06 16:52:21.095742+08	4	2017-10-06 17:17:50.076153+08	Home
+4	0001000100010001	4	2	Blog	blog	t	f	/home/home/blog/		f		\N	\N	f	7	1	f	2017-10-06 17:18:33.159118+08	2017-10-06 17:18:33.16953+08	5	2017-10-06 17:18:33.16953+08	Blog
+6	00010001000100010002	5	0	Lorem ipsum	lorem-ipsum	t	f	/home/home/blog/lorem-ipsum/		f		\N	\N	f	8	1	f	2017-10-06 17:38:19.321731+08	2017-10-06 17:19:53.716774+08	8	2017-10-06 17:38:19.336532+08	Lorem ipsum
+5	00010001000100010001	5	0	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales.	lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-consectetur-eleifend-nibh-molestie-libero-mauris-pharetra-purus-diam-tincidunt-finibus-duis-ultrices-efficitur-sodales	t	f	/home/home/blog/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-consectetur-eleifend-nibh-molestie-libero-mauris-pharetra-purus-diam-tincidunt-finibus-duis-ultrices-efficitur-sodales/		f		\N	\N	f	8	1	f	2017-10-06 17:43:25.985162+08	2017-10-06 17:19:03.636027+08	9	2017-10-06 17:43:26.004181+08	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales.
 \.
 
 
@@ -2082,7 +2091,7 @@ COPY wagtailcore_page (id, path, depth, numchild, title, slug, live, has_unpubli
 -- Name: wagtailcore_page_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('wagtailcore_page_id_seq', 3, true);
+SELECT pg_catalog.setval('wagtailcore_page_id_seq', 6, true);
 
 
 --
@@ -2090,7 +2099,15 @@ SELECT pg_catalog.setval('wagtailcore_page_id_seq', 3, true);
 --
 
 COPY wagtailcore_pagerevision (id, submitted_for_moderation, created_at, content_json, approved_go_live_at, page_id, user_id) FROM stdin;
-1	f	2017-10-06 13:36:34.960221+08	{"pk": 3, "path": "000100010001", "depth": 3, "numchild": 0, "title": "Home", "draft_title": "Home", "slug": "home", "content_type": 5, "live": true, "has_unpublished_changes": false, "url_path": "/home/home/", "owner": 1, "seo_title": "", "show_in_menus": false, "search_description": "", "go_live_at": null, "expire_at": null, "expired": false, "locked": false, "first_published_at": null, "last_published_at": null, "latest_revision_created_at": null, "live_revision": null}	\N	3	1
+1	f	2017-10-06 16:52:21.084648+08	{"pk": 3, "path": "000100010001", "depth": 3, "numchild": 0, "title": "Home", "draft_title": "Home", "slug": "home", "content_type": 6, "live": true, "has_unpublished_changes": false, "url_path": "/home/home/", "owner": 1, "seo_title": "", "show_in_menus": false, "search_description": "", "go_live_at": null, "expire_at": null, "expired": false, "locked": false, "first_published_at": null, "last_published_at": null, "latest_revision_created_at": null, "live_revision": null, "body": "[{\\"type\\": \\"section\\", \\"value\\": {\\"heading\\": \\"\\", \\"sub_heading\\": \\"\\", \\"body\\": \\"\\", \\"styling\\": {\\"container_id\\": \\"\\", \\"container_css\\": \\"\\", \\"background_image\\": null}, \\"gallery\\": [{\\"title\\": \\"\\", \\"caption\\": \\"\\", \\"image\\": null}]}, \\"id\\": \\"5834a5bf-5dca-4a02-908f-d6a997476272\\"}]"}	\N	3	1
+2	f	2017-10-06 16:58:08.312737+08	{"pk": 3, "path": "000100010001", "depth": 3, "numchild": 0, "title": "Home", "draft_title": "Home", "slug": "home", "content_type": 6, "live": true, "has_unpublished_changes": false, "url_path": "/home/home/", "owner": 1, "seo_title": "", "show_in_menus": false, "search_description": "", "go_live_at": null, "expire_at": null, "expired": false, "locked": false, "first_published_at": "2017-10-06T08:52:21.095Z", "last_published_at": "2017-10-06T08:52:21.095Z", "latest_revision_created_at": "2017-10-06T08:52:21.084Z", "live_revision": 1, "body": "[{\\"type\\": \\"section\\", \\"value\\": {\\"heading\\": \\"What We Do\\", \\"sub_heading\\": \\"\\", \\"body\\": \\"\\", \\"styling\\": {\\"container_id\\": \\"\\", \\"container_css\\": \\"\\", \\"background_image\\": null}, \\"gallery\\": [{\\"title\\": \\"Engineering\\", \\"caption\\": \\"Keeping pace with the latest in technology yet ensuring the right tools for the job.\\", \\"image\\": 9}, {\\"title\\": \\"Development\\", \\"caption\\": \\"Keeping pace with the latest in technology yet ensuring the right tools for the job.\\", \\"image\\": 7}, {\\"title\\": \\"Design\\", \\"caption\\": \\"Keeping pace with the latest in technology yet ensuring the right tools for the job.\\", \\"image\\": 6}]}, \\"id\\": \\"5834a5bf-5dca-4a02-908f-d6a997476272\\"}]"}	\N	3	1
+3	f	2017-10-06 17:00:24.906039+08	{"pk": 3, "path": "000100010001", "depth": 3, "numchild": 0, "title": "Home", "draft_title": "Home", "slug": "home", "content_type": 6, "live": true, "has_unpublished_changes": false, "url_path": "/home/home/", "owner": 1, "seo_title": "", "show_in_menus": false, "search_description": "", "go_live_at": null, "expire_at": null, "expired": false, "locked": false, "first_published_at": "2017-10-06T08:52:21.095Z", "last_published_at": "2017-10-06T08:58:08.325Z", "latest_revision_created_at": "2017-10-06T08:58:08.312Z", "live_revision": 2, "body": "[{\\"type\\": \\"section\\", \\"value\\": {\\"heading\\": \\"What We Do\\", \\"sub_heading\\": \\"\\", \\"body\\": \\"\\", \\"styling\\": {\\"container_id\\": \\"\\", \\"container_css\\": \\"\\", \\"background_image\\": null}, \\"gallery\\": [{\\"title\\": \\"Engineering\\", \\"caption\\": \\"Keeping pace with the latest in technology yet ensuring the right tools for the job.\\", \\"image\\": 9}, {\\"title\\": \\"Development\\", \\"caption\\": \\"Keeping pace with the latest in technology yet ensuring the right tools for the job.\\", \\"image\\": 7}, {\\"title\\": \\"Design\\", \\"caption\\": \\"Keeping pace with the latest in technology yet ensuring the right tools for the job.\\", \\"image\\": 6}]}, \\"id\\": \\"5834a5bf-5dca-4a02-908f-d6a997476272\\"}, {\\"type\\": \\"section\\", \\"value\\": {\\"heading\\": \\"About\\", \\"sub_heading\\": \\"LES BOIS ENGINEERING INNOVATIONS\\", \\"body\\": \\"We are an outsourcing company focusing on Website Development and Engineering Solutions for Electronics and Electrical Engineers. We develop and maintain the website and collaborate with Engineers all over the world on projects, articles and educational sources. We will be promoting related products and embed it on projects, publish technical articles that will be useful for electronics designers and engineers and becomes a source of all information for new designs, projects, and new technology.\\", \\"styling\\": {\\"container_id\\": \\"\\", \\"container_css\\": \\"\\", \\"background_image\\": null}, \\"gallery\\": [{\\"title\\": \\"\\", \\"caption\\": \\"\\", \\"image\\": null}]}, \\"id\\": \\"c559dbbc-35b1-428a-b5ae-dcbd21a45f67\\"}]"}	\N	3	1
+7	f	2017-10-06 17:19:53.70318+08	{"pk": 6, "path": "00010001000100010002", "depth": 5, "numchild": 0, "title": "Lorem ipsum", "draft_title": "Lorem ipsum", "slug": "lorem-ipsum", "content_type": 8, "live": true, "has_unpublished_changes": false, "url_path": "/home/home/blog/lorem-ipsum/", "owner": 1, "seo_title": "", "show_in_menus": false, "search_description": "", "go_live_at": null, "expire_at": null, "expired": false, "locked": false, "first_published_at": null, "last_published_at": null, "latest_revision_created_at": null, "live_revision": null, "cover": null, "date": "2017-10-06", "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales.", "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales. Pellentesque aliquam lectus elit, quis viverra tortor tincidunt non. Nulla facilisi. In hac habitasse platea dictumst. Pellentesque dolor justo, auctor non pretium a, convallis quis sem. Maecenas vitae efficitur risus. Phasellus vel scelerisque enim, iaculis tempor ex. Donec bibendum libero lorem, sit amet eleifend tellus venenatis eu. Donec dolor purus, maximus vitae posuere nec, consectetur in justo.</p><p>Pellentesque porta in nisl eu mattis. Aenean eu feugiat lacus, sed vestibulum odio. Nunc sodales rhoncus eleifend. Nullam eu orci nunc. Fusce felis urna, tincidunt quis nisl id, porta vehicula eros. Suspendisse varius est id sem sodales, nec imperdiet purus dictum. Proin nec nisi nec augue sagittis condimentum at gravida erat. Proin elementum sit amet orci id malesuada. Nullam tincidunt semper felis, sed ultricies est. Vestibulum ornare lectus in ultricies suscipit. Sed sed maximus lacus. Duis tempus nulla et malesuada blandit. Vestibulum urna arcu, ullamcorper ut libero a, semper malesuada ante. Vivamus in porta sem. Integer gravida mattis lectus sit amet efficitur. Vivamus luctus et elit sit amet aliquam.</p>", "gallery_images": [{"pk": 3, "sort_order": 0, "page": 6, "image": 29, "caption": ""}]}	\N	6	1
+4	f	2017-10-06 17:17:50.063068+08	{"pk": 3, "path": "000100010001", "depth": 3, "numchild": 0, "title": "Home", "draft_title": "Home", "slug": "home", "content_type": 6, "live": true, "has_unpublished_changes": false, "url_path": "/home/home/", "owner": 1, "seo_title": "", "show_in_menus": false, "search_description": "", "go_live_at": null, "expire_at": null, "expired": false, "locked": false, "first_published_at": "2017-10-06T08:52:21.095Z", "last_published_at": "2017-10-06T09:00:24.918Z", "latest_revision_created_at": "2017-10-06T09:00:24.906Z", "live_revision": 3, "body": "[{\\"type\\": \\"section\\", \\"value\\": {\\"heading\\": \\"What We Do\\", \\"sub_heading\\": \\"\\", \\"body\\": \\"\\", \\"styling\\": {\\"container_id\\": \\"\\", \\"container_css\\": \\"\\", \\"background_image\\": null}, \\"gallery\\": [{\\"title\\": \\"Engineering\\", \\"caption\\": \\"Keeping pace with the latest in technology yet ensuring the right tools for the job.\\", \\"image\\": 9}, {\\"title\\": \\"Development\\", \\"caption\\": \\"Keeping pace with the latest in technology yet ensuring the right tools for the job.\\", \\"image\\": 7}, {\\"title\\": \\"Design\\", \\"caption\\": \\"Keeping pace with the latest in technology yet ensuring the right tools for the job.\\", \\"image\\": 6}]}, \\"id\\": \\"5834a5bf-5dca-4a02-908f-d6a997476272\\"}, {\\"type\\": \\"section\\", \\"value\\": {\\"heading\\": \\"About\\", \\"sub_heading\\": \\"LES BOIS ENGINEERING INNOVATIONS\\", \\"body\\": \\"We are an outsourcing company focusing on Website Development and Engineering Solutions for Electronics and Electrical Engineers. We develop and maintain the website and collaborate with Engineers all over the world on projects, articles and educational sources. We will be promoting related products and embed it on projects, publish technical articles that will be useful for electronics designers and engineers and becomes a source of all information for new designs, projects, and new technology.\\", \\"styling\\": {\\"container_id\\": \\"\\", \\"container_css\\": \\"\\", \\"background_image\\": null}, \\"gallery\\": [{\\"title\\": \\"\\", \\"caption\\": \\"\\", \\"image\\": null}]}, \\"id\\": \\"c559dbbc-35b1-428a-b5ae-dcbd21a45f67\\"}, {\\"type\\": \\"section\\", \\"value\\": {\\"heading\\": \\"Meet The Team\\", \\"sub_heading\\": \\"\\", \\"body\\": \\"\\", \\"styling\\": {\\"container_id\\": \\"\\", \\"container_css\\": \\"\\", \\"background_image\\": null}, \\"gallery\\": [{\\"title\\": \\"ADAM\\", \\"caption\\": \\"The Boss\\", \\"image\\": 3}, {\\"title\\": \\"ROB\\", \\"caption\\": \\"The Other Boss\\", \\"image\\": 29}, {\\"title\\": \\"RIZA\\", \\"caption\\": \\"The Manager\\", \\"image\\": 27}, {\\"title\\": \\"GLEN\\", \\"caption\\": \\"The Senior Dev\\", \\"image\\": 11}, {\\"title\\": \\"ROLAND\\", \\"caption\\": \\"The Hackerman\\", \\"image\\": 31}, {\\"title\\": \\"GOPER\\", \\"caption\\": \\"Goofy Developer\\", \\"image\\": 13}, {\\"title\\": \\"MARK\\", \\"caption\\": \\"Random Developer\\", \\"image\\": 23}, {\\"title\\": \\"JEREMY\\", \\"caption\\": \\"The Backend Guy\\", \\"image\\": 16}, {\\"title\\": \\"PHILIP\\", \\"caption\\": \\"The Design Guy\\", \\"image\\": 25}, {\\"title\\": \\"KIN\\", \\"caption\\": \\"The Python Tamer\\", \\"image\\": 19}, {\\"title\\": \\"JOSE\\", \\"caption\\": \\"Frontend Pope\\", \\"image\\": 18}, {\\"title\\": \\"CLEM\\", \\"caption\\": \\"Video Guy\\", \\"image\\": 5}]}, \\"id\\": \\"d897f7c3-edf3-494f-8de3-7137a26bfc2b\\"}, {\\"type\\": \\"section\\", \\"value\\": {\\"heading\\": \\"Partners\\", \\"sub_heading\\": \\"\\", \\"body\\": \\"\\", \\"styling\\": {\\"container_id\\": \\"\\", \\"container_css\\": \\"\\", \\"background_image\\": null}, \\"gallery\\": [{\\"title\\": \\"\\", \\"caption\\": \\"\\", \\"image\\": 8}, {\\"title\\": \\"\\", \\"caption\\": \\"\\", \\"image\\": 1}, {\\"title\\": \\"\\", \\"caption\\": \\"\\", \\"image\\": 14}]}, \\"id\\": \\"af3ea5a5-c2db-46ea-bccd-58fa328d0450\\"}, {\\"type\\": \\"section\\", \\"value\\": {\\"heading\\": \\"Daily\\", \\"sub_heading\\": \\"\\", \\"body\\": \\"\\", \\"styling\\": {\\"container_id\\": \\"\\", \\"container_css\\": \\"\\", \\"background_image\\": null}, \\"gallery\\": [{\\"title\\": \\"\\", \\"caption\\": \\"\\", \\"image\\": 31}, {\\"title\\": \\"\\", \\"caption\\": \\"\\", \\"image\\": 27}, {\\"title\\": \\"\\", \\"caption\\": \\"\\", \\"image\\": 23}, {\\"title\\": \\"\\", \\"caption\\": \\"\\", \\"image\\": 25}, {\\"title\\": \\"\\", \\"caption\\": \\"\\", \\"image\\": 29}, {\\"title\\": \\"\\", \\"caption\\": \\"\\", \\"image\\": 16}, {\\"title\\": \\"\\", \\"caption\\": \\"\\", \\"image\\": 19}, {\\"title\\": \\"\\", \\"caption\\": \\"\\", \\"image\\": 11}]}, \\"id\\": \\"b07bf240-745a-444b-9a37-fe7fc9cce5ad\\"}]"}	\N	3	1
+5	f	2017-10-06 17:18:33.159118+08	{"pk": 4, "path": "0001000100010001", "depth": 4, "numchild": 0, "title": "Blog", "draft_title": "Blog", "slug": "blog", "content_type": 7, "live": true, "has_unpublished_changes": false, "url_path": "/home/home/blog/", "owner": 1, "seo_title": "", "show_in_menus": false, "search_description": "", "go_live_at": null, "expire_at": null, "expired": false, "locked": false, "first_published_at": null, "last_published_at": null, "latest_revision_created_at": null, "live_revision": null, "intro": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales.</p>"}	\N	4	1
+8	f	2017-10-06 17:38:19.321731+08	{"pk": 6, "path": "00010001000100010002", "depth": 5, "numchild": 0, "title": "Lorem ipsum", "draft_title": "Lorem ipsum", "slug": "lorem-ipsum", "content_type": 8, "live": true, "has_unpublished_changes": false, "url_path": "/home/home/blog/lorem-ipsum/", "owner": 1, "seo_title": "", "show_in_menus": false, "search_description": "", "go_live_at": null, "expire_at": null, "expired": false, "locked": false, "first_published_at": "2017-10-06T09:19:53.716Z", "last_published_at": "2017-10-06T09:19:53.716Z", "latest_revision_created_at": "2017-10-06T09:19:53.703Z", "live_revision": 7, "cover": 35, "date": "2017-10-06", "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales.", "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales. Pellentesque aliquam lectus elit, quis viverra tortor tincidunt non. Nulla facilisi. In hac habitasse platea dictumst. Pellentesque dolor justo, auctor non pretium a, convallis quis sem. Maecenas vitae efficitur risus. Phasellus vel scelerisque enim, iaculis tempor ex. Donec bibendum libero lorem, sit amet eleifend tellus venenatis eu. Donec dolor purus, maximus vitae posuere nec, consectetur in justo.</p><p>Pellentesque porta in nisl eu mattis. Aenean eu feugiat lacus, sed vestibulum odio. Nunc sodales rhoncus eleifend. Nullam eu orci nunc. Fusce felis urna, tincidunt quis nisl id, porta vehicula eros. Suspendisse varius est id sem sodales, nec imperdiet purus dictum. Proin nec nisi nec augue sagittis condimentum at gravida erat. Proin elementum sit amet orci id malesuada. Nullam tincidunt semper felis, sed ultricies est. Vestibulum ornare lectus in ultricies suscipit. Sed sed maximus lacus. Duis tempus nulla et malesuada blandit. Vestibulum urna arcu, ullamcorper ut libero a, semper malesuada ante. Vivamus in porta sem. Integer gravida mattis lectus sit amet efficitur. Vivamus luctus et elit sit amet aliquam.</p>", "gallery_images": [{"pk": 3, "sort_order": 0, "page": 6, "image": 29, "caption": ""}]}	\N	6	1
+6	f	2017-10-06 17:19:03.620198+08	{"pk": 5, "path": "00010001000100010001", "depth": 5, "numchild": 0, "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales.", "draft_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales.", "slug": "lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-consectetur-eleifend-nibh-molestie-libero-mauris-pharetra-purus-diam-tincidunt-finibus-duis-ultrices-efficitur-sodales", "content_type": 8, "live": true, "has_unpublished_changes": false, "url_path": "/home/home/blog/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-consectetur-eleifend-nibh-molestie-libero-mauris-pharetra-purus-diam-tincidunt-finibus-duis-ultrices-efficitur-sodales/", "owner": 1, "seo_title": "", "show_in_menus": false, "search_description": "", "go_live_at": null, "expire_at": null, "expired": false, "locked": false, "first_published_at": null, "last_published_at": null, "latest_revision_created_at": null, "live_revision": null, "cover": null, "date": "2017-10-06", "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales.", "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales. Pellentesque aliquam lectus elit, quis viverra tortor tincidunt non. Nulla facilisi. In hac habitasse platea dictumst. Pellentesque dolor justo, auctor non pretium a, convallis quis sem. Maecenas vitae efficitur risus. Phasellus vel scelerisque enim, iaculis tempor ex. Donec bibendum libero lorem, sit amet eleifend tellus venenatis eu. Donec dolor purus, maximus vitae posuere nec, consectetur in justo.</p><p>Pellentesque porta in nisl eu mattis. Aenean eu feugiat lacus, sed vestibulum odio. Nunc sodales rhoncus eleifend. Nullam eu orci nunc. Fusce felis urna, tincidunt quis nisl id, porta vehicula eros. Suspendisse varius est id sem sodales, nec imperdiet purus dictum. Proin nec nisi nec augue sagittis condimentum at gravida erat. Proin elementum sit amet orci id malesuada. Nullam tincidunt semper felis, sed ultricies est. Vestibulum ornare lectus in ultricies suscipit. Sed sed maximus lacus. Duis tempus nulla et malesuada blandit. Vestibulum urna arcu, ullamcorper ut libero a, semper malesuada ante. Vivamus in porta sem. Integer gravida mattis lectus sit amet efficitur. Vivamus luctus et elit sit amet aliquam.</p><p>Etiam tempor urna lobortis mattis viverra. Donec scelerisque leo risus, eu euismod massa fermentum non. Vivamus erat mauris, ultricies id ante sed, convallis tincidunt sem. Donec sit amet augue mi. Maecenas et est augue. Nullam suscipit dignissim sem in posuere. Nunc rutrum libero ut suscipit varius. Etiam porttitor, magna vitae placerat vestibulum, nisl neque posuere mi, nec pharetra ipsum elit ac risus. Sed nisl nisl, interdum et purus ut, bibendum ullamcorper erat. Etiam nec urna ac diam posuere laoreet. Nulla sed ex diam. Sed quam justo, tristique quis tempor at, fermentum vitae mauris. Phasellus vel lacus bibendum, viverra elit quis, dictum nisl. Etiam sed velit lorem. Nam bibendum congue justo, vitae sodales metus sagittis quis.</p><p>Vivamus tincidunt nisi et augue suscipit, ac commodo erat pulvinar. Praesent non dictum velit, scelerisque ullamcorper purus. Nam eget euismod velit. Aliquam accumsan eros et ultricies pharetra. Morbi tristique erat at turpis commodo tempus. Fusce ultrices convallis ex. Nulla viverra libero id laoreet ornare. In tincidunt ac dui vitae finibus. Vivamus sit amet leo ante. Phasellus ut mauris mi. Phasellus lacinia enim non nunc porta venenatis. Morbi ut vehicula est. Curabitur quis convallis ex. Aliquam fermentum sollicitudin sodales. Vivamus at fringilla nunc. Etiam vel vestibulum eros, ac pharetra augue.</p><p>Suspendisse potenti. Curabitur eleifend sit amet orci vitae semper. In lobortis nisi a nulla venenatis vestibulum vel a ligula. Sed ac magna non orci molestie congue. Donec sagittis venenatis velit nec maximus. Mauris sapien dolor, pretium sit amet mollis vel, malesuada vitae risus. Curabitur mollis tellus lorem, sit amet faucibus libero convallis in. Fusce lobortis felis sed nibh euismod, at congue urna eleifend. Sed gravida ante a cursus dictum. Nulla vel quam nec tortor congue sagittis.</p>", "gallery_images": [{"pk": 1, "sort_order": 0, "page": 5, "image": 29, "caption": ""}, {"pk": 2, "sort_order": 1, "page": 5, "image": 31, "caption": ""}]}	\N	5	1
+9	f	2017-10-06 17:43:25.985162+08	{"pk": 5, "path": "00010001000100010001", "depth": 5, "numchild": 0, "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales.", "draft_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales.", "slug": "lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-consectetur-eleifend-nibh-molestie-libero-mauris-pharetra-purus-diam-tincidunt-finibus-duis-ultrices-efficitur-sodales", "content_type": 8, "live": true, "has_unpublished_changes": false, "url_path": "/home/home/blog/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-consectetur-eleifend-nibh-molestie-libero-mauris-pharetra-purus-diam-tincidunt-finibus-duis-ultrices-efficitur-sodales/", "owner": 1, "seo_title": "", "show_in_menus": false, "search_description": "", "go_live_at": null, "expire_at": null, "expired": false, "locked": false, "first_published_at": "2017-10-06T09:19:03.636Z", "last_published_at": "2017-10-06T09:19:03.636Z", "latest_revision_created_at": "2017-10-06T09:19:03.620Z", "live_revision": 6, "cover": 33, "date": "2017-10-06", "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales.", "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur eleifend nibh, in molestie libero. Mauris pharetra purus a diam tincidunt finibus. Duis ultrices efficitur sodales. Pellentesque aliquam lectus elit, quis viverra tortor tincidunt non. Nulla facilisi. In hac habitasse platea dictumst. Pellentesque dolor justo, auctor non pretium a, convallis quis sem. Maecenas vitae efficitur risus. Phasellus vel scelerisque enim, iaculis tempor ex. Donec bibendum libero lorem, sit amet eleifend tellus venenatis eu. Donec dolor purus, maximus vitae posuere nec, consectetur in justo.</p><p>Pellentesque porta in nisl eu mattis. Aenean eu feugiat lacus, sed vestibulum odio. Nunc sodales rhoncus eleifend. Nullam eu orci nunc. Fusce felis urna, tincidunt quis nisl id, porta vehicula eros. Suspendisse varius est id sem sodales, nec imperdiet purus dictum. Proin nec nisi nec augue sagittis condimentum at gravida erat. Proin elementum sit amet orci id malesuada. Nullam tincidunt semper felis, sed ultricies est. Vestibulum ornare lectus in ultricies suscipit. Sed sed maximus lacus. Duis tempus nulla et malesuada blandit. Vestibulum urna arcu, ullamcorper ut libero a, semper malesuada ante. Vivamus in porta sem. Integer gravida mattis lectus sit amet efficitur. Vivamus luctus et elit sit amet aliquam.</p><p>Etiam tempor urna lobortis mattis viverra. Donec scelerisque leo risus, eu euismod massa fermentum non. Vivamus erat mauris, ultricies id ante sed, convallis tincidunt sem. Donec sit amet augue mi. Maecenas et est augue. Nullam suscipit dignissim sem in posuere. Nunc rutrum libero ut suscipit varius. Etiam porttitor, magna vitae placerat vestibulum, nisl neque posuere mi, nec pharetra ipsum elit ac risus. Sed nisl nisl, interdum et purus ut, bibendum ullamcorper erat. Etiam nec urna ac diam posuere laoreet. Nulla sed ex diam. Sed quam justo, tristique quis tempor at, fermentum vitae mauris. Phasellus vel lacus bibendum, viverra elit quis, dictum nisl. Etiam sed velit lorem. Nam bibendum congue justo, vitae sodales metus sagittis quis.</p><p>Vivamus tincidunt nisi et augue suscipit, ac commodo erat pulvinar. Praesent non dictum velit, scelerisque ullamcorper purus. Nam eget euismod velit. Aliquam accumsan eros et ultricies pharetra. Morbi tristique erat at turpis commodo tempus. Fusce ultrices convallis ex. Nulla viverra libero id laoreet ornare. In tincidunt ac dui vitae finibus. Vivamus sit amet leo ante. Phasellus ut mauris mi. Phasellus lacinia enim non nunc porta venenatis. Morbi ut vehicula est. Curabitur quis convallis ex. Aliquam fermentum sollicitudin sodales. Vivamus at fringilla nunc. Etiam vel vestibulum eros, ac pharetra augue.</p><p>Suspendisse potenti. Curabitur eleifend sit amet orci vitae semper. In lobortis nisi a nulla venenatis vestibulum vel a ligula. Sed ac magna non orci molestie congue. Donec sagittis venenatis velit nec maximus. Mauris sapien dolor, pretium sit amet mollis vel, malesuada vitae risus. Curabitur mollis tellus lorem, sit amet faucibus libero convallis in. Fusce lobortis felis sed nibh euismod, at congue urna eleifend. Sed gravida ante a cursus dictum. Nulla vel quam nec tortor congue sagittis.</p>", "gallery_images": [{"pk": 1, "sort_order": 0, "page": 5, "image": 29, "caption": ""}, {"pk": 2, "sort_order": 1, "page": 5, "image": 31, "caption": ""}]}	\N	5	1
 \.
 
 
@@ -2098,7 +2115,7 @@ COPY wagtailcore_pagerevision (id, submitted_for_moderation, created_at, content
 -- Name: wagtailcore_pagerevision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('wagtailcore_pagerevision_id_seq', 1, true);
+SELECT pg_catalog.setval('wagtailcore_pagerevision_id_seq', 9, true);
 
 
 --
@@ -2197,6 +2214,41 @@ SELECT pg_catalog.setval('wagtailforms_formsubmission_id_seq', 1, false);
 --
 
 COPY wagtailimages_image (id, title, file, width, height, created_at, focal_point_x, focal_point_y, focal_point_width, focal_point_height, uploaded_by_user_id, file_size, collection_id) FROM stdin;
+1	AAC.png	original_images/AAC_fp7QTaB.png	239	44	2017-10-06 16:53:20.465598+08	\N	\N	\N	\N	1	3761	1
+2	Adam_Full.png	original_images/Adam_Full.png	262	519	2017-10-06 16:53:20.533662+08	\N	\N	\N	\N	1	13961	1
+3	Adam.png	original_images/Adam_MoMaQRN.png	268	301	2017-10-06 16:53:20.585863+08	\N	\N	\N	\N	1	8412	1
+4	Clem_full.png	original_images/Clem_full.png	191	452	2017-10-06 16:53:20.639228+08	\N	\N	\N	\N	1	14335	1
+5	Clem.png	original_images/Clem_Ycxmh6o.png	268	301	2017-10-06 16:53:20.694927+08	\N	\N	\N	\N	1	12410	1
+6	Design.png	original_images/Design_Djc9HYu.png	89	103	2017-10-06 16:53:20.754717+08	\N	\N	\N	\N	1	10457	1
+7	Developments.png	original_images/Developments_LrC8Jwl.png	88	103	2017-10-06 16:53:20.80237+08	\N	\N	\N	\N	1	9404	1
+8	EETECH.png	original_images/EETECH_kTE3rAb.png	188	35	2017-10-06 16:53:20.849446+08	\N	\N	\N	\N	1	2295	1
+9	Engineering.png	original_images/Engineering_K1nbSHm.png	90	102	2017-10-06 16:53:20.906061+08	\N	\N	\N	\N	1	10025	1
+10	Glen_full.png	original_images/Glen_full.png	201	515	2017-10-06 16:53:20.948756+08	\N	\N	\N	\N	1	34371	1
+11	Glen.png	original_images/Glen_9ohIIds.png	268	301	2017-10-06 16:53:20.992966+08	\N	\N	\N	\N	1	23321	1
+12	Goper_full.png	original_images/Goper_full.png	294	466	2017-10-06 16:53:21.031979+08	\N	\N	\N	\N	1	20730	1
+13	Goper.png	original_images/Goper_zxqVdwU.png	268	301	2017-10-06 16:53:21.070561+08	\N	\N	\N	\N	1	19665	1
+14	growpromote.png	original_images/growpromote_Qfad9ZF.png	302	59	2017-10-06 16:53:21.108178+08	\N	\N	\N	\N	1	5657	1
+15	Jeremy_full.png	original_images/Jeremy_full.png	273	538	2017-10-06 16:53:21.149453+08	\N	\N	\N	\N	1	22607	1
+16	Jeremy.png	original_images/Jeremy_wmC5m3Z.png	268	301	2017-10-06 16:53:21.194094+08	\N	\N	\N	\N	1	17846	1
+17	Jose_full.png	original_images/Jose_full.png	179	492	2017-10-06 16:53:21.241653+08	\N	\N	\N	\N	1	12628	1
+18	Jose.png	original_images/Jose_rEXROgB.png	268	301	2017-10-06 16:53:21.291003+08	\N	\N	\N	\N	1	9855	1
+19	kin.png	original_images/kin_XCBRs7K.png	268	301	2017-10-06 16:53:21.362055+08	\N	\N	\N	\N	1	9148	1
+20	lin_full.png	original_images/lin_full.png	160	488	2017-10-06 16:53:21.403156+08	\N	\N	\N	\N	1	12082	1
+21	line_design.png	original_images/line_design.png	127	15	2017-10-06 16:53:21.44353+08	\N	\N	\N	\N	1	1514	1
+22	Mark_full.png	original_images/Mark_full.png	146	484	2017-10-06 16:53:21.484474+08	\N	\N	\N	\N	1	14705	1
+23	Mark.png	original_images/Mark_nnre7jh.png	268	301	2017-10-06 16:53:21.524057+08	\N	\N	\N	\N	1	11028	1
+24	philip_full.png	original_images/philip_full.png	164	482	2017-10-06 16:53:21.574113+08	\N	\N	\N	\N	1	15203	1
+25	philip.png	original_images/philip_0kznm8V.png	268	301	2017-10-06 16:53:21.62169+08	\N	\N	\N	\N	1	19935	1
+26	Riza_full.png	original_images/Riza_full.png	261	448	2017-10-06 16:53:21.667775+08	\N	\N	\N	\N	1	34290	1
+27	Riza.png	original_images/Riza_KSDRNFv.png	268	301	2017-10-06 16:53:21.710547+08	\N	\N	\N	\N	1	22534	1
+28	Rob_Full.png	original_images/Rob_Full.png	180	482	2017-10-06 16:53:21.752371+08	\N	\N	\N	\N	1	17312	1
+29	Rob.png	original_images/Rob_QY97Cxe.png	268	301	2017-10-06 16:53:21.796492+08	\N	\N	\N	\N	1	12571	1
+30	Roland_full.png	original_images/Roland_full.png	203	470	2017-10-06 16:53:21.840122+08	\N	\N	\N	\N	1	19578	1
+31	Roland.png	original_images/Roland_8DWpUgZ.png	268	301	2017-10-06 16:53:21.880694+08	\N	\N	\N	\N	1	16862	1
+32	Wave _1.png	original_images/Wave__1.png	1799	617	2017-10-06 16:53:21.926038+08	\N	\N	\N	\N	1	818372	1
+33	Wave_2.png	original_images/Wave_2.png	1800	393	2017-10-06 16:53:21.973838+08	\N	\N	\N	\N	1	524210	1
+34	Wave_3.png	original_images/Wave_3.png	1800	317	2017-10-06 16:53:22.023598+08	\N	\N	\N	\N	1	422430	1
+35	dumb	original_images/21768148_1475331365849070_5579645671125356882_n_uNVek8U.jpg	700	676	2017-10-06 17:38:14.484596+08	\N	\N	\N	\N	1	\N	1
 \.
 
 
@@ -2204,7 +2256,7 @@ COPY wagtailimages_image (id, title, file, width, height, created_at, focal_poin
 -- Name: wagtailimages_image_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('wagtailimages_image_id_seq', 1, false);
+SELECT pg_catalog.setval('wagtailimages_image_id_seq', 35, true);
 
 
 --
@@ -2212,6 +2264,43 @@ SELECT pg_catalog.setval('wagtailimages_image_id_seq', 1, false);
 --
 
 COPY wagtailimages_rendition (id, file, width, height, focal_point_key, image_id, filter_spec) FROM stdin;
+1	images/Wave_3.max-165x165.png	165	29		34	max-165x165
+2	images/Wave_2.max-165x165.png	165	36		33	max-165x165
+3	images/Wave__1.max-165x165.png	165	56		32	max-165x165
+4	images/Roland_8DWpUgZ.max-165x165.png	146	165		31	max-165x165
+5	images/Roland_full.max-165x165.png	71	165		30	max-165x165
+6	images/Rob_QY97Cxe.max-165x165.png	146	165		29	max-165x165
+7	images/Rob_Full.max-165x165.png	61	165		28	max-165x165
+8	images/Riza_KSDRNFv.max-165x165.png	146	165		27	max-165x165
+9	images/Riza_full.max-165x165.png	96	165		26	max-165x165
+10	images/philip_0kznm8V.max-165x165.png	146	165		25	max-165x165
+11	images/philip_full.max-165x165.png	56	165		24	max-165x165
+12	images/Mark_nnre7jh.max-165x165.png	146	165		23	max-165x165
+13	images/Mark_full.max-165x165.png	49	165		22	max-165x165
+14	images/line_design.max-165x165.png	127	15		21	max-165x165
+15	images/lin_full.max-165x165.png	54	165		20	max-165x165
+16	images/kin_XCBRs7K.max-165x165.png	146	165		19	max-165x165
+17	images/Jose_rEXROgB.max-165x165.png	146	165		18	max-165x165
+18	images/Jose_full.max-165x165.png	60	165		17	max-165x165
+19	images/Jeremy_wmC5m3Z.max-165x165.png	146	165		16	max-165x165
+20	images/Jeremy_full.max-165x165.png	83	165		15	max-165x165
+21	images/growpromote_Qfad9ZF.max-165x165.png	165	32		14	max-165x165
+22	images/Goper_zxqVdwU.max-165x165.png	146	165		13	max-165x165
+23	images/Goper_full.max-165x165.png	104	165		12	max-165x165
+24	images/Glen_9ohIIds.max-165x165.png	146	165		11	max-165x165
+25	images/Glen_full.max-165x165.png	64	165		10	max-165x165
+26	images/Engineering_K1nbSHm.max-165x165.png	90	102		9	max-165x165
+27	images/EETECH_kTE3rAb.max-165x165.png	165	30		8	max-165x165
+28	images/Developments_LrC8Jwl.max-165x165.png	88	103		7	max-165x165
+29	images/Design_Djc9HYu.max-165x165.png	89	103		6	max-165x165
+30	images/Clem_Ycxmh6o.max-165x165.png	146	165		5	max-165x165
+31	images/Clem_full.max-165x165.png	69	165		4	max-165x165
+32	images/Adam_MoMaQRN.max-165x165.png	146	165		3	max-165x165
+33	images/Adam_Full.max-165x165.png	83	165		2	max-165x165
+34	images/AAC_fp7QTaB.max-165x165.png	165	30		1	max-165x165
+35	images/Rob_QY97Cxe.2e16d0ba.fill-320x240.png	268	201	2e16d0ba	29	fill-320x240
+36	images/Roland_8DWpUgZ.2e16d0ba.fill-320x240.png	268	201	2e16d0ba	31	fill-320x240
+37	images/21768148_1475331365849070_557964567112535688.max-165x165_6DtaPj1.jpg	165	159		35	max-165x165
 \.
 
 
@@ -2219,7 +2308,7 @@ COPY wagtailimages_rendition (id, file, width, height, focal_point_key, image_id
 -- Name: wagtailimages_rendition_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('wagtailimages_rendition_id_seq', 1, false);
+SELECT pg_catalog.setval('wagtailimages_rendition_id_seq', 37, true);
 
 
 --
