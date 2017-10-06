@@ -2,24 +2,18 @@ import React, { Component } from 'react'
 
 class Partners extends Component {
     render() {
+        const { props } = this
         return(
             <div id="partners" className="section">
                 <div className="container grid-xl">
-                    <h1 className="title text-center">PARTNERS</h1>
+                    <h1 className="title text-center">{props.heading}</h1>
 
                     <div className="columns">
-                        <div className="column col-xs-3 section-line-util section-grid-centered">
-                            <img alt="upvote" src="/static/img/upvote.png" />
-                        </div>
-                        <div className="column col-xs-3 section-line-util section-grid-centered">
-                            <img alt="eetech" src="/static/img/eetech.png"/>
-                        </div>
-                        <div className="column col-xs-3 section-line-util section-grid-centered">
-                            <img alt="all about circuits" src="/static/img/circuits.png" />
-                        </div>
-                        <div className="column col-xs-3 section-line-util section-grid-centered">
-                            <img alt="go promote" src="/static/img/grow-promote.png" />
-                        </div>
+                        {props.gallery.map((gallery, index) => {
+                            return (<div key={index} className="column col-xs-3 section-line-util section-grid-centered">
+                                <img alt="upvote" src={gallery.image_url} />
+                            </div>)
+                        })}
                     </div>
                 </div>
             </div>

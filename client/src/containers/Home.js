@@ -37,21 +37,36 @@ const menuSettings = [
     }
 ]
 
+
+
+const UseSectionProps = (props) => {
+    const sections = [
+        WhatWeDo,
+        About,
+        Team,
+        Partners,
+        Daily
+    ]
+
+    return sections.map((Component, index) => {
+        return(<Component {...props.sections[index]} key={index} />)
+    })
+}
+
 class Home extends Component {
     render() {
         const { props } = this
         const { screens } = props
+
         return(
             <div className="home">
                 <Navigation
                     screens={screens}
                     menu={menuSettings} />
                 <Jumbotron />
-                <WhatWeDo />
-                <About />
-                <Team />
-                <Partners />
-                <Daily />
+
+                <UseSectionProps sections={props.sections} />
+
                 <Footer />
             </div>
         )

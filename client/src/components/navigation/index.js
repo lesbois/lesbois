@@ -73,6 +73,9 @@ class Navigation extends Component {
                                               </li>
                                           )
                                       })}
+                                      <li className="navbar-menu-item">
+                                        <a href="/blog">BLOG</a>
+                                      </li>
                                   </ul>
                                 )}
                             </Media>
