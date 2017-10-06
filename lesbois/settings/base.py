@@ -16,6 +16,7 @@ CLIENT_DIR = env('CLIENT_DIR')
 
 INSTALLED_APPS = [
     'home',
+    'blog',
     'search',
 
     'wagtail.wagtailforms',

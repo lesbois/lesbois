@@ -39,9 +39,10 @@ class PageSection(Page):
 
         tmp_data = []
         for (key, data) in enumerate(stream_data):
-            if stream_data[key]['type'] == 'section':
-                value = stream_data[key]['value']
-                # Get gallery images URL
+            streamfield = stream_data[key]
+            if streamfield['type'] == 'section':
+                value = streamfield['value']
+                # Get gallery image URLs
                 value['gallery'] = self.transform_gallery(value['gallery'])
                 if value['styling']['background_image'] is not None:
                     bgimage_pk = value['styling']['background_image']
