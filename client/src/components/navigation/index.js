@@ -57,7 +57,7 @@ class Navigation extends Component {
                                 <img src="/static/img/logo-lbs.png" />
                                 <img src="/static/img/logo-flipped.png" />
                             </a>
-                            <a href="#" onClick={toggle.bind(this)} className="show-sm btn btn-primary btn-lg ml-auto"><i className="icon icon-menu"></i></a>
+                            <a href="#" onClick={toggle.bind(this)} className="show-sm btn btn-lg ml-auto"><i className="icon icon-menu"></i></a>
                         </section>
                         <section className="navbar-section">
                             <Media query={{ maxWidth: screens.sm }}>

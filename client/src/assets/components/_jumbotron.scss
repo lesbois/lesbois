@@ -4,9 +4,26 @@
     .heading,
     .sub-heading {
         color: #ffffff;
+        @media only screen and (max-width: $size-lg) {
+            text-align: center;
+        }
+        @media only screen and (max-width: $size-md) {
+
+        }
     }
+    img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+    }
+
     &-content {
-        padding-left: 30%;
+        @media only screen and (max-width: $size-lg) {
+            .btn {
+                display: block;
+                margin: auto;
+            }
+        }
         h2 {
             font-size: 50.9pt;
         }

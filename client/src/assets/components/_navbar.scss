@@ -65,9 +65,15 @@
         }
     }
     &-section {
+        @media only screen and (max-width: $size-lg) {
+            flex: none !important;
+        }
+        @media only screen and (max-width: $size-md) {
+            flex: none !important;
+        }
         @media only screen and (max-width: $size-sm) {
             width: 100%;
-            flex: auto !important;
+            flex: none !important;
             &:first-child {
                 padding: 25px;
             }

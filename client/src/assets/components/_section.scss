@@ -2,11 +2,13 @@
     padding: 10% 0 0;
     .title {
         font-family: MontserratBold;
-        font-size: 83.7px;
         letter-spacing: 2px;
-        padding: 5%;
+        padding: 5% 0;
         position: relative;
         margin-bottom: 2.5em;
+        @media only screen and (max-width: $size-sm) {
+            font-size: 2rem;
+        }
         &:after {
             content: "";
               width: 128px;
@@ -17,6 +19,18 @@
               margin: auto;
               left: 0;
               right: 0;
+        }
+    }
+    &-grid {
+        h1 {
+            font-family: MontserratLight;
+            font-size: 14.5px;
+            margin: 18px 0 5px;
+            letter-spacing: 5px;
+        }
+        p {
+            opacity: .7;
+            line-height: 1.5 !important;
         }
     }
     h3 {

@@ -7,10 +7,10 @@ class Jumbotron extends Component {
             <div id="jumbotron" className="jumbotron">
                 <div className="container grid-xl">
                     <div className="columns">
-                        <div className="column col-xs-6">
-                            <img src="/static/img/banner-image.png" className="img-responsive"/>
+                        <div className="column column col-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-2">
+                            <img src="/static/img/banner-image.png" />
                         </div>
-                        <div className="column col-xs-6 jumbotron-content">
+                        <div className="column column col-4 col-ml-auto col-lg-4 col-md-12 col-sm-12 col-xs-12 jumbotron-content">
                             <h1 className="heading">
                                 LES BOIS <br/> ENGINEERING <br/> INNOVATIONS
                             </h1>
