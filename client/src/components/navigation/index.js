@@ -9,11 +9,11 @@ class Navigation extends Component {
     state = {
         isOpen: false
     }
-    moveTo(e) {
+    moveTo(href, e) {
+        console.log(href)
         e.preventDefault()
-        const { attributes } = e.currentTarget
-        const { href } = attributes
-        jump(href.value)
+        const loc = document.getElementById(href)
+        jump(loc)
     }
     componentDidMount() {
         document.addEventListener(
@@ -62,7 +62,7 @@ class Navigation extends Component {
 
                             <Media query={{ maxWidth: screens.sm }}>
                                 {matches => matches ? (
-                                    <MobileMenu isOpen={isOpen} menu={menu} />
+                                    <MobileMenu isOpen={isOpen} menu={menu} moveTo={moveTo} />
                                 ) : (
                                     <section className="navbar-section">
                                         <ul className="navbar-menu">
@@ -70,7 +70,7 @@ class Navigation extends Component {
                                               const { hashTag, name } = value
                                               return(
                                                   <li key={key} className="navbar-menu-item">
-                                                      <a href={hashTag} onClick={moveTo.bind(this)}>{name.toUpperCase()}</a>
+                                                      <a href={hashTag} onClick={moveTo.bind(this, hashTag)}>{name.toUpperCase()}</a>
                                                   </li>
                                               )
                                           })}

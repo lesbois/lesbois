@@ -7,7 +7,7 @@ function FirstChild(props) {
   return childrenArray[0] || null;
 }
 
-const MobileMenu = ({isOpen, menu}) => {
+const MobileMenu = ({isOpen, menu, moveTo}) => {
     return(
         <Transition
             transitionName="mobilenav"
@@ -23,7 +23,7 @@ const MobileMenu = ({isOpen, menu}) => {
                             const { hashTag, name } = value
                             return(
                                 <li key={key} className="navbar-menu-item">
-                                    <a href={hashTag} onClick={moveTo.bind(this)}>{name.toUpperCase()}</a>
+                                    <a href={hashTag} onClick={moveTo.bind(this, hashTag)}>{name.toUpperCase()}</a>
                                 </li>
                             )
                         })}

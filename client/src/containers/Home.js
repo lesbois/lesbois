@@ -13,27 +13,27 @@ import Footer from '../components/footer'
 const menuSettings = [
     {
         name: 'home',
-        hashTag: '#jumbotron'
+        hashTag: 'jumbotron'
     },
     {
         name: 'what we do',
-        hashTag: '#what-we-do'
+        hashTag: 'what-we-do'
     },
     {
         name: 'about',
-        hashTag: '#about'
+        hashTag: 'about'
     },
     {
         name: 'team',
-        hashTag: '#team'
+        hashTag: 'team'
     },
     {
         name: 'partners',
-        hashTag: '#partners',
+        hashTag: 'partners',
     },
     {
         name: 'daily',
-        hashTag: '#daily'
+        hashTag: 'daily'
     }
 ]
 
