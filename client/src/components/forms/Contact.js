@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
+import { reduxForm } from 'redux-form'
+import { validator } from './validator'
 import Modal from '../modal'
 import ModalFooter from '../modal/footer'
 import ModalBody from '../modal/body'
+import { CONTACT } from './models/Contact'
 
 class Contact extends Component {
     render() {
         const {props} = this
         const title = "Contact Us"
+        console.log(props)
         return (
             <Modal title={title} onClose={this.props.close}>
                 <ModalBody>
@@ -28,4 +32,7 @@ class Contact extends Component {
     }
 }
 
-export default Contact
+export default reduxForm({
+    form: 'contact-form',
+    validate: validator(CONTACT)
+})(Contact)
