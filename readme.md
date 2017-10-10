@@ -24,7 +24,7 @@ Note: make sure to restore the database after installing postgres
 #### Restorng the postgres SQL backup
 ----------
 
-##On your terminal go to the root directory of lesbois then type the ff:##
+##### On your terminal go to the root directory of lesbois then type the ff:##
 
 1. Login to your postgres
 ```
