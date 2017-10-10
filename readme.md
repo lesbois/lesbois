@@ -5,9 +5,9 @@
 
 1. Download and install python
 > Make sure it works in your terminal or command line
-2. On your terminal type python
+2. On your terminal type
 ```
-    get-pip.py
+    python get-pip.py
  ```
 3. `pip install -r requirements/base.txt`
 4.  `pip install -r requirements/local.txt`
