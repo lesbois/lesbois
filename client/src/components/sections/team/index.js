@@ -16,8 +16,10 @@ class Team extends Component {
                                         return (
                                             <div key={index} className="section-grid column col-3 col-xs-12 col-sm-12 col-md-12 col-lg-3">
                                                 <img alt="engineering" src={gallery.image_url} className="img-responsive"/>
-                                                <h1>{gallery.title}</h1>
-                                                <p>{gallery.caption}</p>
+                                                <div className="section-content">
+                                                    <h1>{gallery.title}</h1>
+                                                    <p>{gallery.caption}</p>
+                                                </div>
                                             </div>
                                         )
                                     })}

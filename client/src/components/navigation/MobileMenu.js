@@ -17,16 +17,18 @@ const MobileMenu = ({isOpen, menu}) => {
             transitionLeaveTimeout={400}
             transitionAppear={true}>
             {isOpen ?
-                <ul className="navbar-menu">
-                    {map(menu, (value, key) => {
-                        const { hashTag, name } = value
-                        return(
-                            <li key={key} className="navbar-menu-item">
-                                <a href={hashTag} onClick={moveTo.bind(this)}>{name.toUpperCase()}</a>
-                            </li>
-                        )
-                    })}
-                </ul>
+                <div className="navbar-section">
+                    <ul className="navbar-menu">
+                        {map(menu, (value, key) => {
+                            const { hashTag, name } = value
+                            return(
+                                <li key={key} className="navbar-menu-item">
+                                    <a href={hashTag} onClick={moveTo.bind(this)}>{name.toUpperCase()}</a>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
             : null }
         </Transition>
     )

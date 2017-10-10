@@ -12,8 +12,11 @@
         top: 0;
         width: 100%;
         z-index: 999999;
+        @media only screen and (max-width: $size-sm) {
+            height: 415px;
+        }
         &.switched {
-            background: #fff;
+
             a.navbar-brand {
                 img {
                     animation-name: flip;
@@ -31,7 +34,14 @@
                     }
                 }
             }
-
+            .navbar-section {
+                background: #fff;
+            }
+        }
+        .container {
+            @media only screen and (max-width: $size-md) {
+                padding: 0;
+            }
         }
     }
     &-menu {
@@ -65,38 +75,41 @@
         }
     }
     &-section {
-        @media only screen and (max-width: $size-lg) {
+        @media only screen and (max-width: $size-sm) {
+            width: 100%;
             flex: none !important;
+            background: linear-gradient(to right, #362b72, #e6406b);
+            &:first-child {
+                padding: 25px;
+                position: relative;
+                z-index: 999;
+            }
+            &:last-child {
+                justify-content: flex-start !important;
+                position: absolute;
+                z-index: 888;
+            }
         }
         @media only screen and (max-width: $size-md) {
             flex: none !important;
         }
-        @media only screen and (max-width: $size-sm) {
-            width: 100%;
+        @media only screen and (max-width: $size-lg) {
             flex: none !important;
-            &:first-child {
-                padding: 25px;
-            }
-            &:last-child {
-                justify-content: flex-start !important;
-            }
+        }
+        @media only screen and (max-width: 1024px) {
+            flex: none !important;
         }
     }
 }
 
-.mobilenav-enter, .mobilenav-appear {
-	opacity: 0;
-	animation: slideDown 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
 .mobilenav-leave {
-	animation: slideUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+	animation: slideUp 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 	opacity: 1.0;
 }
 
-.mobilenav-appear {
+.mobilenav-enter {
 	opacity: 0;
-	animation: slideDown 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	animation: slideDown 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 @keyframes slideIn {

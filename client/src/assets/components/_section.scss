@@ -1,5 +1,6 @@
 .section {
     padding: 10% 0 0;
+    margin-bottom: 5%;
     .title {
         font-family: MontserratBold;
         letter-spacing: 2px;
@@ -19,6 +20,12 @@
               margin: auto;
               left: 0;
               right: 0;
+        }
+    }
+
+    &-content {
+        @media only screen and (max-width: $size-md) {
+            text-align: center;
         }
     }
     &-grid {
@@ -57,5 +64,14 @@
         letter-spacing: 0.9px;
         color: #7e8899;
         line-height: 2.33;
+    }
+    @media only screen and (max-width: $size-lg) {
+        padding: 0 5%;
+    }
+}
+
+#daily {
+    .column {
+        padding: 1px;
     }
 }

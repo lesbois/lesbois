@@ -59,27 +59,29 @@ class Navigation extends Component {
                             </a>
                             <a href="#" onClick={toggle.bind(this)} className="show-sm btn btn-lg ml-auto"><i className="icon icon-menu"></i></a>
                         </section>
-                        <section className="navbar-section">
+
                             <Media query={{ maxWidth: screens.sm }}>
                                 {matches => matches ? (
                                     <MobileMenu isOpen={isOpen} menu={menu} />
                                 ) : (
-                                  <ul className="navbar-menu">
-                                      {map(menu, (value, key) => {
-                                          const { hashTag, name } = value
-                                          return(
-                                              <li key={key} className="navbar-menu-item">
-                                                  <a href={hashTag} onClick={moveTo.bind(this)}>{name.toUpperCase()}</a>
-                                              </li>
-                                          )
-                                      })}
-                                      <li className="navbar-menu-item">
-                                        <a href="/blog">BLOG</a>
-                                      </li>
-                                  </ul>
+                                    <section className="navbar-section">
+                                        <ul className="navbar-menu">
+                                          {map(menu, (value, key) => {
+                                              const { hashTag, name } = value
+                                              return(
+                                                  <li key={key} className="navbar-menu-item">
+                                                      <a href={hashTag} onClick={moveTo.bind(this)}>{name.toUpperCase()}</a>
+                                                  </li>
+                                              )
+                                          })}
+                                          <li className="navbar-menu-item">
+                                            <a href="/blog">BLOG</a>
+                                          </li>
+                                        </ul>
+                                  </section>
                                 )}
                             </Media>
-                        </section>
+
                     </header>
                 </div>
             </div>
