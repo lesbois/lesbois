@@ -2,6 +2,7 @@ import { combineReducers } from 'redux'
 import { createRootReducer as processModules } from 'redux-module-builder'
 import { routerReducer as routing, push } from 'react-router-redux'
 import { reducer as form } from 'redux-form'
+import * as Modal from './Modal'
 
 /**
  * import your modules here
@@ -15,6 +16,7 @@ import { reducer as form } from 'redux-form'
  * @type {Object}
  */
 const modules = {
+    Modal
 }
 
 const initialActions = {

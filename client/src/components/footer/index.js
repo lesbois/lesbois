@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
+import Contact from '../forms/Contact'
 
 class Footer extends Component {
+
+    handleClick(component, e) {
+        const { actions } = this.props
+        actions.Modal.open(component)
+    }
+
     render() {
-        const { props } = this
+        const { props, handleClick } = this
         return (
             <div className="footer">
                 <div className="container grid-xl">
@@ -16,7 +23,8 @@ class Footer extends Component {
                             <span>&copy; {new Date().getFullYear()} LES BOIS ENGINEERING INNOVATIONS</span>
                         </div>
                         <div className="column col-3 col-sm-12 col-xs-12 col-ml-auto footer-contact mt-2 mb2">
-                            <button className="btn btn-default btn-huge">CONTACT US</button>
+                            <button className="btn btn-default btn-huge"
+                                    onClick={handleClick.bind(this, <Contact close={props.actions.Modal.close}/>)}>CONTACT US</button>
                         </div>
                     </div>
                     <div className="columns">

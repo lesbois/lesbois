@@ -9,6 +9,7 @@ import Team from '../components/sections/team'
 import Partners from '../components/sections/partners'
 import Daily from '../components/sections/daily'
 import Footer from '../components/footer'
+import Overlay from '../components/overlay'
 
 const menuSettings = [
     {
@@ -62,11 +63,13 @@ class Home extends Component {
                 <Navigation
                     screens={screens}
                     menu={menuSettings} />
-                <Jumbotron />
+                <Jumbotron actions={props.actions}/>
 
                 { props.sections ? <UseSectionProps sections={props.sections} /> : null }
 
-                <Footer />
+                <Footer actions={props.actions}/>
+
+                <Overlay modal={props.Modal}/>
             </div>
         )
     }
