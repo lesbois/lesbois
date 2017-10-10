@@ -34,7 +34,10 @@ Note: make sure to restore the database after installing postgres
 ```
     CREATE DATABASE lesbois;
 ```
-3. Hit enter
+3. Hit enter and type below to quit psql
+```
+    \q
+```
 4. Importing your database
 ```
     psql -U postgres lesbois < partial_entry.sql
