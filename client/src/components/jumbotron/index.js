@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Contact from '../forms/Contact'
-
+import range from 'lodash/range'
+import map from 'lodash/map'
 class Jumbotron extends Component {
 
     handleClick(e) {
@@ -29,6 +30,11 @@ class Jumbotron extends Component {
                                     onClick={handleClick.bind(this)}>CONTACT US</button>
                         </div>
                     </div>
+                </div>
+                <div className="wave">
+                    {map(range(0, 800), (i) => {
+                        return(<div key={i} className={`line wave-${i}`}></div>)
+                    })}
                 </div>
             </div>
         )
