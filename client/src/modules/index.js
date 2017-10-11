@@ -3,6 +3,7 @@ import { createRootReducer as processModules } from 'redux-module-builder'
 import { routerReducer as routing, push } from 'react-router-redux'
 import { reducer as form } from 'redux-form'
 import * as Modal from './Modal'
+import * as Mail from './Mail'
 
 /**
  * import your modules here
@@ -16,7 +17,8 @@ import * as Modal from './Modal'
  * @type {Object}
  */
 const modules = {
-    Modal
+    Modal,
+    Mail
 }
 
 const initialActions = {
