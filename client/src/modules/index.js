@@ -17,7 +17,8 @@ import * as Mail from './Mail'
  * @type {Object}
  */
 const modules = {
-    Modal
+    Modal,
+    Mail
 }
 
 const initialActions = {
