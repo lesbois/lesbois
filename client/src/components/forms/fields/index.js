@@ -32,7 +32,7 @@ export const FieldSetter = function(_field) {
   const { rows, type } = config
   const setClass = textAreaConfig(type)
   return (
-    <div  className={`form-group ${meta.touched && meta.error ? 'has-error' : ''}`}>
+    <div  className={`form-group`}>
       <config.tag {...input} rows={rows} type={type} className={`form-input ${setClass}`} placeholder={label} />
       {meta.touched && meta.error ? <small>{meta.error}</small> : null}
     </div>

@@ -3,9 +3,10 @@ import Contact from '../forms/Contact'
 
 class Jumbotron extends Component {
 
-    handleClick(component, e) {
+    handleClick(e) {
+        e.preventDefault()
         const { actions } = this.props
-        actions.Modal.open(component)
+        actions.Modal.open(null)
     }
 
     render() {
@@ -25,7 +26,7 @@ class Jumbotron extends Component {
                             <h3 className="sub-heading">{`We're engineering awsome`}</h3>
 
                             <button className="btn btn-default btn-huge"
-                                    onClick={handleClick.bind(this, <Contact close={props.actions.Modal.close} sendMail={props.actions.Mail.sendMail}/>)}>CONTACT US</button>
+                                    onClick={handleClick.bind(this)}>CONTACT US</button>
                         </div>
                     </div>
                 </div>

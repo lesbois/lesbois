@@ -10,7 +10,7 @@ import Partners from '../components/sections/partners'
 import Daily from '../components/sections/daily'
 import Footer from '../components/footer'
 import Overlay from '../components/overlay'
-
+import Contact from '../components/forms/Contact'
 const menuSettings = [
     {
         name: 'home',
@@ -69,7 +69,7 @@ class Home extends Component {
 
                 <Footer actions={props.actions}/>
 
-                <Overlay modal={props.Modal}/>
+                <Overlay modal={props.Modal}><Contact /></Overlay>
             </div>
         )
     }
