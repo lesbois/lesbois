@@ -133,3 +133,12 @@ WAGTAIL_SITE_NAME = "lesbois"
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
+
+# Email Configuration
+EMAIL_HOST = env.str('EMAIL_HOST')
+EMAIL_PORT = env.int('EMAIL_PORT')
+EMAIL_HOST_USER = env.str('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env.str('EMAIL_HOST_PASSWORD')
+
+# Email address of contact us receiver
+CONTACT_EMAIL_RECEIVER = env('CONTACT_EMAIL_RECEIVER')

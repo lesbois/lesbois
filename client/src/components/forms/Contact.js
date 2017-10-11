@@ -10,7 +10,7 @@ import map from 'lodash/map'
 
 class Contact extends Component {
     submitForm(values) {
-        this.props.sendMail(values)
+        this.props.sendMail(values, this.props.token)
     }
 
     render() {

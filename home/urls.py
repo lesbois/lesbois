@@ -1,7 +1,7 @@
 from django.conf.urls import include, url
 
-from .views import HomeView
+from .views import ContactView
 
 urlpatterns = [
-    url(r'^$', HomeView.as_view()),
+    url(r'^contact/$', ContactView.as_view()),
 ]

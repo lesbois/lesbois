@@ -70,7 +70,7 @@ class Home extends Component {
                 <Footer actions={props.actions}/>
 
                 <Overlay modal={props.Modal}>
-                    <Contact close={props.actions.Modal.close} sendMail={props.actions.Mail.sendMail}/>
+                    <Contact close={props.actions.Modal.close} sendMail={props.actions.Mail.sendMail} token={props.token}/>
                 </Overlay>
             </div>
         )

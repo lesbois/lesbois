@@ -1,8 +1,10 @@
 import {createConstants, createReducer} from 'redux-module-builder'
+import map from 'lodash/map'
 
 export const types = createConstants('mail')(
     'SENDING',
-    'SENT'
+    'SENT',
+    'ERROR'
 )
 
 export const initialState = {
@@ -12,10 +14,24 @@ export const initialState = {
 }
 
 export const actions = {
-    sendMail(values) {
+    sendMail(values, token) {
         return (dispatch, getState) => {
-            console.log(values)
+            const body = new FormData()
             dispatch({type: types.SENDING})
+            map(values, (value, key) => body.append(key, value))
+
+            return fetch('/api/contact/', {
+                method: 'POST',
+                body,
+                headers: new Headers({'X-CSRFToken': token}),
+                credentials: 'same-origin',
+            })
+            .then((response) => response.json())
+            .then((message) => {
+                dispatch({type: types.SENT, message})
+                alert("NA SEND NA IMONG EMAIL DONG! BALIK LANG UGMA!")
+            })
+            .catch(err => dispatch({type: types.ERROR, err}))
         }
     }
 }
