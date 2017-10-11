@@ -2,19 +2,19 @@ export const CONTACT = {
     name: {
         tag: 'input',
         type: 'text',
-        label: 'Name *',
+        label: 'Name',
         validator: 'isAlpha'
     },
     email: {
         tag: 'input',
         type: 'email',
-        label: 'Email address *',
+        label: 'Email',
         validator: 'isEmail'
     },
     message: {
         tag:'textarea',
         type:'textarea',
-        label:'Your message *',
+        label:'Tell something',
         rows: 4,
         validator: 'isAlpha'
     }
