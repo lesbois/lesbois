@@ -14,6 +14,7 @@ export const initialState = {
 export const actions = {
     sendMail(values) {
         return (dispatch, getState) => {
+            console.log(values)
             dispatch({type: types.SENDING})
         }
     }
