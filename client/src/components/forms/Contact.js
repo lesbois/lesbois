@@ -25,7 +25,7 @@ class Contact extends Component {
                     </ModalBody>
                     <ModalFooter>
                         <button className="btn btn-primary">Submit</button>
-                        <button className="btn">Cancel</button>
+                        <button className="btn" onClick={this.props.close}>Cancel</button>
                     </ModalFooter>
                 </form>
             </Modal>

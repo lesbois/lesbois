@@ -31,9 +31,19 @@ export const FieldSetter = function(_field) {
   let { meta, input, label, config } = _field
   const { rows, type } = config
   const setClass = textAreaConfig(type)
+  console.log(meta);
+
+  const isFail = (meta.error && !meta.pristine) ||
+                (meta.submitFailed && meta.pristine)
+
   return (
-    <div  className={`form-group`}>
-      <config.tag {...input} rows={rows} type={type} className={`form-input ${setClass}`} placeholder={label} />
+    <div  className={`form-group ${isFail ? 'has-error' : ''}`}>
+      <config.tag
+            {...input}
+            rows={rows}
+            type={type}
+            className={`form-input ${setClass}`}
+            placeholder={label} />
       {meta.touched && meta.error ? <small>{meta.error}</small> : null}
     </div>
   )
