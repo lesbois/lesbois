@@ -7,23 +7,28 @@
 {% block body_class %}blog{% endblock %}
 
 {% block content %}
-    <div class="container grid-xl">
-        <h1 class="title">{{ page.title }}</h1>
-        <div class="intro">
-            {{ page.intro|richtext }}
-        </div>
+    <div class="content">
+        <div class="container grid-xl">
+            <h1 class="title">{{ page.title }}</h1>
+            <div class="intro">
+                {{ page.intro|richtext }}
+            </div>
 
-        <div class="children">
-            <div class="columns">
-                {% for post in page.get_children %}
-                    <div class="column col-4">
-                        <img src="{% photo_url post.specific.cover %}" class="img-responsive">
-
-                        <h2><a href="{% pageurl post %}">{{ post.title|truncatechars:50 }}</a></h2>
-                        {{ post.specific.intro }}
-                        {{ post.specific.body|truncatechars:10|richtext }}
-                    </div>
-                {% endfor %}
+            <div class="children">
+                <div class="columns">
+                    {% for post in page.get_children %}
+                        <div class="column col-4 has-content-overlay">
+                            <a href="{% pageurl post %}">
+                                <div class="content-overlay"></div>
+                                <img src="{% photo_url post.specific.cover %}" class="content-image">
+                                <div class="content-details fadeIn-top">
+                                    <h3 class="content-title">Smaple TItle</h3>
+                                    <p class="content-text">sample text here goes here here here hrere...</p>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>

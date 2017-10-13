@@ -36,9 +36,7 @@
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
 
-        <div class="content">
-            {% block content %}{% endblock %}
-        </div>
+        {% block content %}{% endblock %}
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/lesbois.js' %}"></script>
