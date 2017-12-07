@@ -5,7 +5,7 @@ import environ
 from .base import *
 
 env = environ.Env()
-env.read_env('.env.production')
+env.read_env('.env')
 
 DEBUG = env.bool('DEBUG', False)
 
