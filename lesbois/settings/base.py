@@ -84,9 +84,10 @@ WSGI_APPLICATION = 'lesbois.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': env.db('DATABASE_URL')
-}
+if env('LOCAL'):
+    DATABASES = {
+        'default': env.db('DATABASE_URL')
+    }
 
 
 # Internationalization
