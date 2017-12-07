@@ -8,7 +8,7 @@ env = environ.Env()
 env.read_env('.env')
 
 if __name__ == "__main__":
-    if env('LOCAL', default=True):
+    if env.bool('LOCAL'):
         os.environ.setdefault("DJANGO_SETTINGS_MODULE", "lesbois.settings.dev")
     else:
         os.environ.setdefault("DJANGO_SETTINGS_MODULE", "lesbois.settings.production")

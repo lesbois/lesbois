@@ -9,7 +9,7 @@ env.read_env('.env.production')
 
 DEBUG = env.bool('DEBUG', False)
 
-DATABASE = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': env.str('DATABASE_NAME'),
