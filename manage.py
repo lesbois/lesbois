@@ -5,7 +5,11 @@ import os
 import sys
 import environ
 env = environ.Env()
-env.read_env('.env')
+
+if env('LOCAL'):
+    env.read_env('.env')
+else:
+    env.read_env('.env.production')
 
 if __name__ == "__main__":
     if env('LOCAL', default=True):
