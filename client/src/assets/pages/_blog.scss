@@ -2,10 +2,13 @@ body.blog {
     .content {
 
         .children {
+            .latest-posts {
+                margin-bottom: 80px;
+            }
+
             .has-content-overlay {
                 position: relative;
-                width: 90%;
-                max-width: 400px;
+                // width: 90%;
                 margin: auto;
                 overflow: hidden;
                 padding-left: 0;

@@ -17,6 +17,13 @@ class Blog(Page):
         FieldPanel('intro', classname='full')
     ]
 
+    def get_context(self, request):
+        context = super(Blog, self).get_context(request)
+        blogpages = self.get_children().live().order_by('-first_published_at')
+        context['latest_posts'] = blogpages[:3]
+        context['posts'] = blogpages[3:]
+        return context
+
 
 class BlogPage(Page):
     cover = models.IntegerField(null=True, blank=True)

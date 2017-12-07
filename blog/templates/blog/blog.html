@@ -15,19 +15,70 @@
             </div>
 
             <div class="children">
-                <div class="columns">
-                    {% for post in page.get_children %}
-                        <div class="column col-4 has-content-overlay">
-                            <a href="{% pageurl post %}">
-                                <div class="content-overlay"></div>
-                                <img src="{% photo_url post.specific.cover %}" class="content-image">
-                                <div class="content-details fadeIn-top">
-                                    <h3 class="content-title">Smaple TItle</h3>
-                                    <p class="content-text">sample text here goes here here here hrere...</p>
-                                </div>
-                            </a>
+                <div class="latest-posts">
+                    <div class="columns">
+                        <div class="column col-8">
+                            {% for post in latest_posts %}
+                                {% if forloop.first %}
+                                    <div class="has-content-overlay">
+                                        <a href="{% pageurl post %}">
+                                            <div class="content-overlay"></div>
+                                            <img class="content-image" src="{% photo_url post.specific.cover %}">
+                                            <div class="content-details fadeIn-top">
+                                                <h3 class="content-title">Smaple TItle</h3>
+                                                <p class="content-text">sample text here goes here here here hrere...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
                         </div>
-                    {% endfor %}
+                        <div class="column col-4">
+                            <div class="columns">
+                                {% for post in latest_posts %}
+                                    {% if not forloop.first %}
+                                        <div class="column col-12 has-content-overlay">
+                                            <a href="{% pageurl post %}">
+                                                <div class="content-overlay"></div>
+                                                <img class="content-image" src="{% photo_url post.specific.cover %}">
+                                                <div class="content-details fadeIn-top">
+                                                    <h3 class="content-title">Smaple TItle</h3>
+                                                    <p class="content-text">sample text here goes here here here hrere...</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="remaining-posts">
+                    <h1>LATEST POSTS</h1>
+                    <div class="columns">
+                        {% for post in posts %}
+                            <div class="column col-4">
+                                <a href="{% pageurl post %}">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <img src="{% photo_url post.specific.cover %}" class="img-responsive">
+                                        </div>
+                                        <div class="card-header">
+                                            <div class="card-title h5">Microsoft</div>
+                                            <div class="card-subtitle text-gray">Software and hardware</div>
+                                        </div>
+                                        <div class="card-body">
+                                            Empower every person and every organization on the planet to achieve more.
+                                        </div>
+                                        <div class="card-footer">
+                                            <button class="btn btn-primary">Do</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>

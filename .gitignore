@@ -5,6 +5,7 @@ client/hot
 *.pyc
 *.pyo
 .env
+.env.production
 .idea
 home/__pycache__/
 home/migrations/__pycache__/
