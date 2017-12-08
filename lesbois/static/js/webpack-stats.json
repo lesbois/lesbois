@@ -1,0 +1,17 @@
+{
+    "status": "done",
+    "chunks": {
+        "app": [
+            {
+                "name": "app.js",
+                "path": "/Users/kinbasco/Desktop/Code/lesbois/lesbois/static/js/app.js"
+            },
+            {
+                "name": "../css/app.css",
+                "path": "/Users/kinbasco/Desktop/Code/lesbois/lesbois/static/css/app.css"
+            }
+        ]
+    },
+    "startTime": 1512713435795,
+    "endTime": 1512713445862
+}

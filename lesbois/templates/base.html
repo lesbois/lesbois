@@ -20,9 +20,9 @@
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-
-        {# Global stylesheets #}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/lesbois.css' %}">
+        {% if not debug %}
+            <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}" />
+        {% endif %}
 
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
@@ -43,6 +43,8 @@
 
         {% if debug %}
             {% render_bundle 'app' %}
+        {% else %}
+            <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
         {% endif %}
 
         {% block extra_js %}

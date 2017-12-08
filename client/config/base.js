@@ -8,9 +8,9 @@ import BundleTracker from 'webpack-bundle-tracker'
 const document_root = '..'
 
 export const output_paths = {
-    hot: join(__dirname, `${document_root}/hot`),
+    hot: join('', `${document_root}/hot`),
     development: join(__dirname, `${document_root}/dist`),
-    production: join(__dirname, `${document_root}/dist`)
+    production: join(process.cwd(), `${document_root}/lesbois/static/js`)
 }
 
 export const entry = {
@@ -22,15 +22,6 @@ export const rules = [
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader"
-    },
-    {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: [
-            {loader: 'style-loader'},
-            {loader: 'css-loader'},
-            {loader: 'sass-loader'}
-        ]
     }
 ]
 
@@ -66,8 +57,9 @@ export default ({env, options}) => {
     const strategy = {
         'output': 'append',
         'entry': 'append',
-        'plugins': 'append'
+        'plugins': 'append',
+        'module': 'append'
     }
 
-    return merge.strategy(strategy)(config, environment[env]())
+    return merge.strategy(strategy)(config, environment[env]({env, options}))
 }
