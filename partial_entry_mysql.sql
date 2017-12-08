@@ -8,20 +8,20 @@ SET time_zone="+00:00";
 CREATE TABLE auth_group (
     id int(11) NOT NULL,
     name varchar(80) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE auth_group_permissions (
     id int(11) NOT NULL,
     group_id int(11) NOT NULL,
     permission_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE auth_permission (
     id int(11) NOT NULL,
     name varchar(255) NOT NULL,
     content_type_id int(11) NOT NULL,
     codename varchar(100) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE auth_user (
     id int(11) NOT NULL,
@@ -35,24 +35,24 @@ CREATE TABLE auth_user (
     is_staff bool NOT NULL,
     is_active bool NOT NULL,
     date_joined timestamp NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE auth_user_groups (
     id int(11) NOT NULL,
     user_id int(11) NOT NULL,
     group_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE auth_user_user_permissions (
     id int(11) NOT NULL,
     user_id int(11) NOT NULL,
     permission_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE blog_blog (
     page_ptr_id int(11) NOT NULL,
     intro text NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE blog_blogpage (
     page_ptr_id int(11) NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE blog_blogpage (
     date date,
     intro varchar(250),
     cover int(11)
-) TYPE=MyISAM;
+);
 
 CREATE TABLE blog_blogpagegalleryimage (
     id int(11) NOT NULL,
@@ -68,7 +68,7 @@ CREATE TABLE blog_blogpagegalleryimage (
     caption varchar(250) NOT NULL,
     image_id int(11) NOT NULL,
     page_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE django_admin_log (
     id int(11) NOT NULL,
@@ -79,48 +79,48 @@ CREATE TABLE django_admin_log (
     change_message text NOT NULL,
     content_type_id int(11),
     user_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE django_content_type (
     id int(11) NOT NULL,
     app_label varchar(100) NOT NULL,
     model varchar(100) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE django_migrations (
     id int(11) NOT NULL,
     app varchar(255) NOT NULL,
     name varchar(255) NOT NULL,
     applied timestamp NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE django_session (
     session_key varchar(40) NOT NULL,
     session_data text NOT NULL,
     expire_date timestamp NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE home_homepage (
     page_ptr_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE home_pagesection (
     page_ptr_id int(11) NOT NULL,
     body text NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE taggit_tag (
     id int(11) NOT NULL,
     name varchar(100) NOT NULL,
     slug varchar(100) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE taggit_taggeditem (
     id int(11) NOT NULL,
     object_id int(11) NOT NULL,
     content_type_id int(11) NOT NULL,
     tag_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailcore_collection (
     id int(11) NOT NULL,
@@ -128,34 +128,34 @@ CREATE TABLE wagtailcore_collection (
     depth int(11) NOT NULL,
     numchild int(11) NOT NULL,
     name varchar(255) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailcore_collectionviewrestriction (
     id int(11) NOT NULL,
     restriction_type varchar(20) NOT NULL,
     password varchar(255) NOT NULL,
     collection_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailcore_collectionviewrestriction_groups (
     id int(11) NOT NULL,
     collectionviewrestriction_id int(11) NOT NULL,
     group_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailcore_groupcollectionpermission (
     id int(11) NOT NULL,
     collection_id int(11) NOT NULL,
     group_id int(11) NOT NULL,
     permission_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailcore_grouppagepermission (
     id int(11) NOT NULL,
     permission_type varchar(20) NOT NULL,
     group_id int(11) NOT NULL,
     page_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailcore_page (
     id int(11) NOT NULL,
@@ -181,7 +181,7 @@ CREATE TABLE wagtailcore_page (
     live_revision_id int(11),
     last_published_at timestamp,
     draft_title varchar(255) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailcore_pagerevision (
     id int(11) NOT NULL,
@@ -191,20 +191,20 @@ CREATE TABLE wagtailcore_pagerevision (
     approved_go_live_at timestamp,
     page_id int(11) NOT NULL,
     user_id int(11)
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailcore_pageviewrestriction (
     id int(11) NOT NULL,
     password varchar(255) NOT NULL,
     page_id int(11) NOT NULL,
     restriction_type varchar(20) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailcore_pageviewrestriction_groups (
     id int(11) NOT NULL,
     pageviewrestriction_id int(11) NOT NULL,
     group_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailcore_site (
     id int(11) NOT NULL,
@@ -213,7 +213,7 @@ CREATE TABLE wagtailcore_site (
     is_default_site bool NOT NULL,
     root_page_id int(11) NOT NULL,
     site_name varchar(255)
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtaildocs_document (
     id int(11) NOT NULL,
@@ -222,7 +222,7 @@ CREATE TABLE wagtaildocs_document (
     created_at timestamp NOT NULL,
     uploaded_by_user_id int(11),
     collection_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailembeds_embed (
     id int(11) NOT NULL,
@@ -237,14 +237,14 @@ CREATE TABLE wagtailembeds_embed (
     width int(11),
     height int(11),
     last_updated timestamp NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailforms_formsubmission (
     id int(11) NOT NULL,
     form_data text NOT NULL,
     submit_time timestamp NOT NULL,
     page_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailimages_image (
     id int(11) NOT NULL,
@@ -260,7 +260,7 @@ CREATE TABLE wagtailimages_image (
     uploaded_by_user_id int(11),
     file_size int(11),
     collection_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailimages_rendition (
     id int(11) NOT NULL,
@@ -270,7 +270,7 @@ CREATE TABLE wagtailimages_rendition (
     focal_point_key varchar(16) NOT NULL,
     image_id int(11) NOT NULL,
     filter_spec varchar(255) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailredirects_redirect (
     id int(11) NOT NULL,
@@ -279,7 +279,7 @@ CREATE TABLE wagtailredirects_redirect (
     redirect_link varchar(200) NOT NULL,
     redirect_page_id int(11),
     site_id int(11)
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailsearch_editorspick (
     id int(11) NOT NULL,
@@ -287,19 +287,19 @@ CREATE TABLE wagtailsearch_editorspick (
     description text NOT NULL,
     page_id int(11) NOT NULL,
     query_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailsearch_query (
     id int(11) NOT NULL,
     query_string varchar(255) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailsearch_querydailyhits (
     id int(11) NOT NULL,
     date date NOT NULL,
     hits int(11) NOT NULL,
     query_id int(11) NOT NULL
-) TYPE=MyISAM;
+);
 
 CREATE TABLE wagtailusers_userprofile (
     id int(11) NOT NULL,
@@ -308,7 +308,7 @@ CREATE TABLE wagtailusers_userprofile (
     rejected_notifications bool NOT NULL,
     user_id int(11) NOT NULL,
     preferred_language varchar(10) NOT NULL
-) TYPE=MyISAM;
+);
 
 ALTER TABLE auth_group_permissions
     ADD CONSTRAINT auth_group_permissions_pkey PRIMARY KEY (id);
