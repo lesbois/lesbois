@@ -10,7 +10,7 @@ env.read_env('.env')
 DEBUG = env.bool('DEBUG', False)
 
 ALLOWED_HOSTS = [
-    "lesboisinnovations.com"
+    "*"
 ]
 
 DATABASES = {
