@@ -5,310 +5,310 @@
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone="+00:00";
 
-CREATE TABLE auth_group (
-    id int(11) NOT NULL,
-    name varchar(80) NOT NULL
-);
-
-CREATE TABLE auth_group_permissions (
-    id int(11) NOT NULL,
-    group_id int(11) NOT NULL,
-    permission_id int(11) NOT NULL
-);
-
-CREATE TABLE auth_permission (
-    id int(11) NOT NULL,
-    name varchar(255) NOT NULL,
-    content_type_id int(11) NOT NULL,
-    codename varchar(100) NOT NULL
-);
-
-CREATE TABLE auth_user (
-    id int(11) NOT NULL,
-    password varchar(128) NOT NULL,
-    last_login timestamp,
-    is_superuser bool NOT NULL,
-    username varchar(150) NOT NULL,
-    first_name varchar(30) NOT NULL,
-    last_name varchar(30) NOT NULL,
-    email varchar(254) NOT NULL,
-    is_staff bool NOT NULL,
-    is_active bool NOT NULL,
-    date_joined timestamp NOT NULL
-);
-
-CREATE TABLE auth_user_groups (
-    id int(11) NOT NULL,
-    user_id int(11) NOT NULL,
-    group_id int(11) NOT NULL
-);
-
-CREATE TABLE auth_user_user_permissions (
-    id int(11) NOT NULL,
-    user_id int(11) NOT NULL,
-    permission_id int(11) NOT NULL
-);
-
-CREATE TABLE blog_blog (
-    page_ptr_id int(11) NOT NULL,
-    intro text NOT NULL
-);
-
-CREATE TABLE blog_blogpage (
-    page_ptr_id int(11) NOT NULL,
-    body text,
-    date date,
-    intro varchar(250),
-    cover int(11)
-);
-
-CREATE TABLE blog_blogpagegalleryimage (
-    id int(11) NOT NULL,
-    sort_order int(11),
-    caption varchar(250) NOT NULL,
-    image_id int(11) NOT NULL,
-    page_id int(11) NOT NULL
-);
-
-CREATE TABLE django_admin_log (
-    id int(11) NOT NULL,
-    action_time timestamp NOT NULL,
-    object_id text,
-    object_repr varchar(200) NOT NULL,
-    action_flag smallint NOT NULL,
-    change_message text NOT NULL,
-    content_type_id int(11),
-    user_id int(11) NOT NULL
-);
-
-CREATE TABLE django_content_type (
-    id int(11) NOT NULL,
-    app_label varchar(100) NOT NULL,
-    model varchar(100) NOT NULL
-);
-
-CREATE TABLE django_migrations (
-    id int(11) NOT NULL,
-    app varchar(255) NOT NULL,
-    name varchar(255) NOT NULL,
-    applied timestamp NOT NULL
-);
-
-CREATE TABLE django_session (
-    session_key varchar(40) NOT NULL,
-    session_data text NOT NULL,
-    expire_date timestamp NOT NULL
-);
-
-CREATE TABLE home_homepage (
-    page_ptr_id int(11) NOT NULL
-);
-
-CREATE TABLE home_pagesection (
-    page_ptr_id int(11) NOT NULL,
-    body text NOT NULL
-);
-
-CREATE TABLE taggit_tag (
-    id int(11) NOT NULL,
-    name varchar(100) NOT NULL,
-    slug varchar(100) NOT NULL
-);
-
-CREATE TABLE taggit_taggeditem (
-    id int(11) NOT NULL,
-    object_id int(11) NOT NULL,
-    content_type_id int(11) NOT NULL,
-    tag_id int(11) NOT NULL
-);
-
-CREATE TABLE wagtailcore_collection (
-    id int(11) NOT NULL,
-    path varchar(255) COLLATE pg_catalog.`C` NOT NULL,
-    depth int(11) NOT NULL,
-    numchild int(11) NOT NULL,
-    name varchar(255) NOT NULL
-);
-
-CREATE TABLE wagtailcore_collectionviewrestriction (
-    id int(11) NOT NULL,
-    restriction_type varchar(20) NOT NULL,
-    password varchar(255) NOT NULL,
-    collection_id int(11) NOT NULL
-);
-
-CREATE TABLE wagtailcore_collectionviewrestriction_groups (
-    id int(11) NOT NULL,
-    collectionviewrestriction_id int(11) NOT NULL,
-    group_id int(11) NOT NULL
-);
-
-CREATE TABLE wagtailcore_groupcollectionpermission (
-    id int(11) NOT NULL,
-    collection_id int(11) NOT NULL,
-    group_id int(11) NOT NULL,
-    permission_id int(11) NOT NULL
-);
-
-CREATE TABLE wagtailcore_grouppagepermission (
-    id int(11) NOT NULL,
-    permission_type varchar(20) NOT NULL,
-    group_id int(11) NOT NULL,
-    page_id int(11) NOT NULL
-);
-
-CREATE TABLE wagtailcore_page (
-    id int(11) NOT NULL,
-    path varchar(255) COLLATE pg_catalog.`C` NOT NULL,
-    depth int(11) NOT NULL,
-    numchild int(11) NOT NULL,
-    title varchar(255) NOT NULL,
-    slug varchar(255) NOT NULL,
-    live bool NOT NULL,
-    has_unpublished_changes bool NOT NULL,
-    url_path text NOT NULL,
-    seo_title varchar(255) NOT NULL,
-    show_in_menus bool NOT NULL,
-    search_description text NOT NULL,
-    go_live_at timestamp,
-    expire_at timestamp,
-    expired bool NOT NULL,
-    content_type_id int(11) NOT NULL,
-    owner_id int(11),
-    locked bool NOT NULL,
-    latest_revision_created_at timestamp,
-    first_published_at timestamp,
-    live_revision_id int(11),
-    last_published_at timestamp,
-    draft_title varchar(255) NOT NULL
-);
-
-CREATE TABLE wagtailcore_pagerevision (
-    id int(11) NOT NULL,
-    submitted_for_moderation bool NOT NULL,
-    created_at timestamp NOT NULL,
-    content_json text NOT NULL,
-    approved_go_live_at timestamp,
-    page_id int(11) NOT NULL,
-    user_id int(11)
-);
-
-CREATE TABLE wagtailcore_pageviewrestriction (
-    id int(11) NOT NULL,
-    password varchar(255) NOT NULL,
-    page_id int(11) NOT NULL,
-    restriction_type varchar(20) NOT NULL
-);
-
-CREATE TABLE wagtailcore_pageviewrestriction_groups (
-    id int(11) NOT NULL,
-    pageviewrestriction_id int(11) NOT NULL,
-    group_id int(11) NOT NULL
-);
-
-CREATE TABLE wagtailcore_site (
-    id int(11) NOT NULL,
-    hostname varchar(255) NOT NULL,
-    port int(11) NOT NULL,
-    is_default_site bool NOT NULL,
-    root_page_id int(11) NOT NULL,
-    site_name varchar(255)
-);
-
-CREATE TABLE wagtaildocs_document (
-    id int(11) NOT NULL,
-    title varchar(255) NOT NULL,
-    file varchar(100) NOT NULL,
-    created_at timestamp NOT NULL,
-    uploaded_by_user_id int(11),
-    collection_id int(11) NOT NULL
-);
-
-CREATE TABLE wagtailembeds_embed (
-    id int(11) NOT NULL,
-    url varchar(200) NOT NULL,
-    max_width smallint,
-    `type` varchar(10) NOT NULL,
-    html text NOT NULL,
-    title text NOT NULL,
-    author_name text NOT NULL,
-    provider_name text NOT NULL,
-    thumbnail_url varchar(200),
-    width int(11),
-    height int(11),
-    last_updated timestamp NOT NULL
-);
-
-CREATE TABLE wagtailforms_formsubmission (
-    id int(11) NOT NULL,
-    form_data text NOT NULL,
-    submit_time timestamp NOT NULL,
-    page_id int(11) NOT NULL
-);
-
-CREATE TABLE wagtailimages_image (
-    id int(11) NOT NULL,
-    title varchar(255) NOT NULL,
-    file varchar(100) NOT NULL,
-    width int(11) NOT NULL,
-    height int(11) NOT NULL,
-    created_at timestamp NOT NULL,
-    focal_point_x int(11),
-    focal_point_y int(11),
-    focal_point_width int(11),
-    focal_point_height int(11),
-    uploaded_by_user_id int(11),
-    file_size int(11),
-    collection_id int(11) NOT NULL
-);
-
-CREATE TABLE wagtailimages_rendition (
-    id int(11) NOT NULL,
-    file varchar(100) NOT NULL,
-    width int(11) NOT NULL,
-    height int(11) NOT NULL,
-    focal_point_key varchar(16) NOT NULL,
-    image_id int(11) NOT NULL,
-    filter_spec varchar(255) NOT NULL
-);
-
-CREATE TABLE wagtailredirects_redirect (
-    id int(11) NOT NULL,
-    old_path varchar(255) NOT NULL,
-    is_permanent bool NOT NULL,
-    redirect_link varchar(200) NOT NULL,
-    redirect_page_id int(11),
-    site_id int(11)
-);
-
-CREATE TABLE wagtailsearch_editorspick (
-    id int(11) NOT NULL,
-    sort_order int(11),
-    description text NOT NULL,
-    page_id int(11) NOT NULL,
-    query_id int(11) NOT NULL
-);
-
-CREATE TABLE wagtailsearch_query (
-    id int(11) NOT NULL,
-    query_string varchar(255) NOT NULL
-);
-
-CREATE TABLE wagtailsearch_querydailyhits (
-    id int(11) NOT NULL,
-    date date NOT NULL,
-    hits int(11) NOT NULL,
-    query_id int(11) NOT NULL
-);
-
-CREATE TABLE wagtailusers_userprofile (
-    id int(11) NOT NULL,
-    submitted_notifications bool NOT NULL,
-    approved_notifications bool NOT NULL,
-    rejected_notifications bool NOT NULL,
-    user_id int(11) NOT NULL,
-    preferred_language varchar(10) NOT NULL
-);
+-- CREATE TABLE auth_group (
+--     id int(11) NOT NULL,
+--     name varchar(80) NOT NULL
+-- );
+--
+-- CREATE TABLE auth_group_permissions (
+--     id int(11) NOT NULL,
+--     group_id int(11) NOT NULL,
+--     permission_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE auth_permission (
+--     id int(11) NOT NULL,
+--     name varchar(255) NOT NULL,
+--     content_type_id int(11) NOT NULL,
+--     codename varchar(100) NOT NULL
+-- );
+--
+-- CREATE TABLE auth_user (
+--     id int(11) NOT NULL,
+--     password varchar(128) NOT NULL,
+--     last_login timestamp,
+--     is_superuser bool NOT NULL,
+--     username varchar(150) NOT NULL,
+--     first_name varchar(30) NOT NULL,
+--     last_name varchar(30) NOT NULL,
+--     email varchar(254) NOT NULL,
+--     is_staff bool NOT NULL,
+--     is_active bool NOT NULL,
+--     date_joined timestamp NOT NULL
+-- );
+--
+-- CREATE TABLE auth_user_groups (
+--     id int(11) NOT NULL,
+--     user_id int(11) NOT NULL,
+--     group_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE auth_user_user_permissions (
+--     id int(11) NOT NULL,
+--     user_id int(11) NOT NULL,
+--     permission_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE blog_blog (
+--     page_ptr_id int(11) NOT NULL,
+--     intro text NOT NULL
+-- );
+--
+-- CREATE TABLE blog_blogpage (
+--     page_ptr_id int(11) NOT NULL,
+--     body text,
+--     date date,
+--     intro varchar(250),
+--     cover int(11)
+-- );
+--
+-- CREATE TABLE blog_blogpagegalleryimage (
+--     id int(11) NOT NULL,
+--     sort_order int(11),
+--     caption varchar(250) NOT NULL,
+--     image_id int(11) NOT NULL,
+--     page_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE django_admin_log (
+--     id int(11) NOT NULL,
+--     action_time timestamp NOT NULL,
+--     object_id text,
+--     object_repr varchar(200) NOT NULL,
+--     action_flag smallint NOT NULL,
+--     change_message text NOT NULL,
+--     content_type_id int(11),
+--     user_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE django_content_type (
+--     id int(11) NOT NULL,
+--     app_label varchar(100) NOT NULL,
+--     model varchar(100) NOT NULL
+-- );
+--
+-- CREATE TABLE django_migrations (
+--     id int(11) NOT NULL,
+--     app varchar(255) NOT NULL,
+--     name varchar(255) NOT NULL,
+--     applied timestamp NOT NULL
+-- );
+--
+-- CREATE TABLE django_session (
+--     session_key varchar(40) NOT NULL,
+--     session_data text NOT NULL,
+--     expire_date timestamp NOT NULL
+-- );
+--
+-- CREATE TABLE home_homepage (
+--     page_ptr_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE home_pagesection (
+--     page_ptr_id int(11) NOT NULL,
+--     body text NOT NULL
+-- );
+--
+-- CREATE TABLE taggit_tag (
+--     id int(11) NOT NULL,
+--     name varchar(100) NOT NULL,
+--     slug varchar(100) NOT NULL
+-- );
+--
+-- CREATE TABLE taggit_taggeditem (
+--     id int(11) NOT NULL,
+--     object_id int(11) NOT NULL,
+--     content_type_id int(11) NOT NULL,
+--     tag_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailcore_collection (
+--     id int(11) NOT NULL,
+--     path varchar(255) COLLATE pg_catalog.`C` NOT NULL,
+--     depth int(11) NOT NULL,
+--     numchild int(11) NOT NULL,
+--     name varchar(255) NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailcore_collectionviewrestriction (
+--     id int(11) NOT NULL,
+--     restriction_type varchar(20) NOT NULL,
+--     password varchar(255) NOT NULL,
+--     collection_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailcore_collectionviewrestriction_groups (
+--     id int(11) NOT NULL,
+--     collectionviewrestriction_id int(11) NOT NULL,
+--     group_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailcore_groupcollectionpermission (
+--     id int(11) NOT NULL,
+--     collection_id int(11) NOT NULL,
+--     group_id int(11) NOT NULL,
+--     permission_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailcore_grouppagepermission (
+--     id int(11) NOT NULL,
+--     permission_type varchar(20) NOT NULL,
+--     group_id int(11) NOT NULL,
+--     page_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailcore_page (
+--     id int(11) NOT NULL,
+--     path varchar(255) COLLATE pg_catalog.`C` NOT NULL,
+--     depth int(11) NOT NULL,
+--     numchild int(11) NOT NULL,
+--     title varchar(255) NOT NULL,
+--     slug varchar(255) NOT NULL,
+--     live bool NOT NULL,
+--     has_unpublished_changes bool NOT NULL,
+--     url_path text NOT NULL,
+--     seo_title varchar(255) NOT NULL,
+--     show_in_menus bool NOT NULL,
+--     search_description text NOT NULL,
+--     go_live_at timestamp,
+--     expire_at timestamp,
+--     expired bool NOT NULL,
+--     content_type_id int(11) NOT NULL,
+--     owner_id int(11),
+--     locked bool NOT NULL,
+--     latest_revision_created_at timestamp,
+--     first_published_at timestamp,
+--     live_revision_id int(11),
+--     last_published_at timestamp,
+--     draft_title varchar(255) NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailcore_pagerevision (
+--     id int(11) NOT NULL,
+--     submitted_for_moderation bool NOT NULL,
+--     created_at timestamp NOT NULL,
+--     content_json text NOT NULL,
+--     approved_go_live_at timestamp,
+--     page_id int(11) NOT NULL,
+--     user_id int(11)
+-- );
+--
+-- CREATE TABLE wagtailcore_pageviewrestriction (
+--     id int(11) NOT NULL,
+--     password varchar(255) NOT NULL,
+--     page_id int(11) NOT NULL,
+--     restriction_type varchar(20) NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailcore_pageviewrestriction_groups (
+--     id int(11) NOT NULL,
+--     pageviewrestriction_id int(11) NOT NULL,
+--     group_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailcore_site (
+--     id int(11) NOT NULL,
+--     hostname varchar(255) NOT NULL,
+--     port int(11) NOT NULL,
+--     is_default_site bool NOT NULL,
+--     root_page_id int(11) NOT NULL,
+--     site_name varchar(255)
+-- );
+--
+-- CREATE TABLE wagtaildocs_document (
+--     id int(11) NOT NULL,
+--     title varchar(255) NOT NULL,
+--     file varchar(100) NOT NULL,
+--     created_at timestamp NOT NULL,
+--     uploaded_by_user_id int(11),
+--     collection_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailembeds_embed (
+--     id int(11) NOT NULL,
+--     url varchar(200) NOT NULL,
+--     max_width smallint,
+--     `type` varchar(10) NOT NULL,
+--     html text NOT NULL,
+--     title text NOT NULL,
+--     author_name text NOT NULL,
+--     provider_name text NOT NULL,
+--     thumbnail_url varchar(200),
+--     width int(11),
+--     height int(11),
+--     last_updated timestamp NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailforms_formsubmission (
+--     id int(11) NOT NULL,
+--     form_data text NOT NULL,
+--     submit_time timestamp NOT NULL,
+--     page_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailimages_image (
+--     id int(11) NOT NULL,
+--     title varchar(255) NOT NULL,
+--     file varchar(100) NOT NULL,
+--     width int(11) NOT NULL,
+--     height int(11) NOT NULL,
+--     created_at timestamp NOT NULL,
+--     focal_point_x int(11),
+--     focal_point_y int(11),
+--     focal_point_width int(11),
+--     focal_point_height int(11),
+--     uploaded_by_user_id int(11),
+--     file_size int(11),
+--     collection_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailimages_rendition (
+--     id int(11) NOT NULL,
+--     file varchar(100) NOT NULL,
+--     width int(11) NOT NULL,
+--     height int(11) NOT NULL,
+--     focal_point_key varchar(16) NOT NULL,
+--     image_id int(11) NOT NULL,
+--     filter_spec varchar(255) NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailredirects_redirect (
+--     id int(11) NOT NULL,
+--     old_path varchar(255) NOT NULL,
+--     is_permanent bool NOT NULL,
+--     redirect_link varchar(200) NOT NULL,
+--     redirect_page_id int(11),
+--     site_id int(11)
+-- );
+--
+-- CREATE TABLE wagtailsearch_editorspick (
+--     id int(11) NOT NULL,
+--     sort_order int(11),
+--     description text NOT NULL,
+--     page_id int(11) NOT NULL,
+--     query_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailsearch_query (
+--     id int(11) NOT NULL,
+--     query_string varchar(255) NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailsearch_querydailyhits (
+--     id int(11) NOT NULL,
+--     date date NOT NULL,
+--     hits int(11) NOT NULL,
+--     query_id int(11) NOT NULL
+-- );
+--
+-- CREATE TABLE wagtailusers_userprofile (
+--     id int(11) NOT NULL,
+--     submitted_notifications bool NOT NULL,
+--     approved_notifications bool NOT NULL,
+--     rejected_notifications bool NOT NULL,
+--     user_id int(11) NOT NULL,
+--     preferred_language varchar(10) NOT NULL
+-- );
 
 ALTER TABLE auth_group_permissions
     ADD CONSTRAINT auth_group_permissions_pkey PRIMARY KEY (id);
