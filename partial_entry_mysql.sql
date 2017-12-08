@@ -310,144 +310,144 @@ SET time_zone="+00:00";
 --     preferred_language varchar(10) NOT NULL
 -- );
 
-ALTER TABLE auth_group_permissions
-    ADD CONSTRAINT auth_group_permissions_pkey PRIMARY KEY (id);
-ALTER TABLE auth_group
-    ADD CONSTRAINT auth_group_pkey PRIMARY KEY (id);
-ALTER TABLE auth_permission
-    ADD CONSTRAINT auth_permission_pkey PRIMARY KEY (id);
-ALTER TABLE auth_user_groups
-    ADD CONSTRAINT auth_user_groups_pkey PRIMARY KEY (id);
-ALTER TABLE auth_user
-    ADD CONSTRAINT auth_user_pkey PRIMARY KEY (id);
-ALTER TABLE auth_user_user_permissions
-    ADD CONSTRAINT auth_user_user_permissions_pkey PRIMARY KEY (id);
-ALTER TABLE blog_blog
-    ADD CONSTRAINT blog_blog_pkey PRIMARY KEY (page_ptr_id);
-ALTER TABLE blog_blogpage
-    ADD CONSTRAINT blog_blogpage_pkey PRIMARY KEY (page_ptr_id);
-ALTER TABLE blog_blogpagegalleryimage
-    ADD CONSTRAINT blog_blogpagegalleryimage_pkey PRIMARY KEY (id);
-ALTER TABLE django_admin_log
-    ADD CONSTRAINT django_admin_log_pkey PRIMARY KEY (id);
-ALTER TABLE django_content_type
-    ADD CONSTRAINT django_content_type_pkey PRIMARY KEY (id);
-ALTER TABLE django_migrations
-    ADD CONSTRAINT django_migrations_pkey PRIMARY KEY (id);
-ALTER TABLE django_session
-    ADD CONSTRAINT django_session_pkey PRIMARY KEY (session_key);
-ALTER TABLE home_homepage
-    ADD CONSTRAINT home_homepage_pkey PRIMARY KEY (page_ptr_id);
-ALTER TABLE home_pagesection
-    ADD CONSTRAINT home_pagesection_pkey PRIMARY KEY (page_ptr_id);
-ALTER TABLE taggit_tag
-    ADD CONSTRAINT taggit_tag_pkey PRIMARY KEY (id);
-ALTER TABLE taggit_taggeditem
-    ADD CONSTRAINT taggit_taggeditem_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailcore_collection
-    ADD CONSTRAINT wagtailcore_collection_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailcore_collectionviewrestriction_groups
-    ADD CONSTRAINT wagtailcore_collectionviewrestriction_groups_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailcore_collectionviewrestriction
-    ADD CONSTRAINT wagtailcore_collectionviewrestriction_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailcore_groupcollectionpermission
-    ADD CONSTRAINT wagtailcore_groupcollectionpermission_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailcore_grouppagepermission
-    ADD CONSTRAINT wagtailcore_grouppagepermission_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailcore_page
-    ADD CONSTRAINT wagtailcore_page_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailcore_pagerevision
-    ADD CONSTRAINT wagtailcore_pagerevision_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailcore_pageviewrestriction_groups
-    ADD CONSTRAINT wagtailcore_pageviewrestriction_groups_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailcore_pageviewrestriction
-    ADD CONSTRAINT wagtailcore_pageviewrestriction_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailcore_site
-    ADD CONSTRAINT wagtailcore_site_pkey PRIMARY KEY (id);
-ALTER TABLE wagtaildocs_document
-    ADD CONSTRAINT wagtaildocs_document_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailembeds_embed
-    ADD CONSTRAINT wagtailembeds_embed_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailforms_formsubmission
-    ADD CONSTRAINT wagtailforms_formsubmission_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailimages_image
-    ADD CONSTRAINT wagtailimages_image_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailimages_rendition
-    ADD CONSTRAINT wagtailimages_rendition_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailredirects_redirect
-    ADD CONSTRAINT wagtailredirects_redirect_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailsearch_editorspick
-    ADD CONSTRAINT wagtailsearch_editorspick_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailsearch_query
-    ADD CONSTRAINT wagtailsearch_query_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailsearch_querydailyhits
-    ADD CONSTRAINT wagtailsearch_querydailyhits_pkey PRIMARY KEY (id);
-ALTER TABLE wagtailusers_userprofile
-    ADD CONSTRAINT wagtailusers_userprofile_pkey PRIMARY KEY (id);
-ALTER TABLE `auth_group` ADD INDEX ( name varchar_pattern_ops ) ;
-ALTER TABLE `auth_group_permissions` ADD INDEX ( group_id ) ;
-ALTER TABLE `auth_group_permissions` ADD INDEX ( permission_id ) ;
-ALTER TABLE `auth_permission` ADD INDEX ( content_type_id ) ;
-ALTER TABLE `auth_user_groups` ADD INDEX ( group_id ) ;
-ALTER TABLE `auth_user_groups` ADD INDEX ( user_id ) ;
-ALTER TABLE `auth_user_user_permissions` ADD INDEX ( permission_id ) ;
-ALTER TABLE `auth_user_user_permissions` ADD INDEX ( user_id ) ;
-ALTER TABLE `auth_user` ADD INDEX ( username varchar_pattern_ops ) ;
-ALTER TABLE `blog_blogpagegalleryimage` ADD INDEX ( image_id ) ;
-ALTER TABLE `blog_blogpagegalleryimage` ADD INDEX ( page_id ) ;
-ALTER TABLE `django_admin_log` ADD INDEX ( content_type_id ) ;
-ALTER TABLE `django_admin_log` ADD INDEX ( user_id ) ;
-ALTER TABLE `django_session` ADD INDEX ( expire_date ) ;
-ALTER TABLE `django_session` ADD INDEX ( session_key varchar_pattern_ops ) ;
-ALTER TABLE `taggit_tag` ADD INDEX ( name varchar_pattern_ops ) ;
-ALTER TABLE `taggit_tag` ADD INDEX ( slug varchar_pattern_ops ) ;
-ALTER TABLE `taggit_taggeditem` ADD INDEX ( content_type_id ) ;
-ALTER TABLE `taggit_taggeditem` ADD INDEX ( content_type_id, object_id ) ;
-ALTER TABLE `taggit_taggeditem` ADD INDEX ( object_id ) ;
-ALTER TABLE `taggit_taggeditem` ADD INDEX ( tag_id ) ;
-ALTER TABLE `wagtailcore_collection` ADD INDEX ( path varchar_pattern_ops ) ;
-ALTER TABLE `wagtailcore_collectionviewrestriction_groups` ADD INDEX ( collectionviewrestriction_id ) ;
-ALTER TABLE `wagtailcore_collectionviewrestriction` ADD INDEX ( collection_id ) ;
-ALTER TABLE `wagtailcore_collectionviewrestriction_groups` ADD INDEX ( group_id ) ;
-ALTER TABLE `wagtailcore_groupcollectionpermission` ADD INDEX ( collection_id ) ;
-ALTER TABLE `wagtailcore_groupcollectionpermission` ADD INDEX ( group_id ) ;
-ALTER TABLE `wagtailcore_groupcollectionpermission` ADD INDEX ( permission_id ) ;
-ALTER TABLE `wagtailcore_grouppagepermission` ADD INDEX ( group_id ) ;
-ALTER TABLE `wagtailcore_grouppagepermission` ADD INDEX ( page_id ) ;
-ALTER TABLE `wagtailcore_page` ADD INDEX ( content_type_id ) ;
-ALTER TABLE `wagtailcore_page` ADD INDEX ( first_published_at ) ;
-ALTER TABLE `wagtailcore_page` ADD INDEX ( live_revision_id ) ;
-ALTER TABLE `wagtailcore_page` ADD INDEX ( owner_id ) ;
-ALTER TABLE `wagtailcore_page` ADD INDEX ( path varchar_pattern_ops ) ;
-ALTER TABLE `wagtailcore_page` ADD INDEX ( slug ) ;
-ALTER TABLE `wagtailcore_page` ADD INDEX ( slug varchar_pattern_ops ) ;
-ALTER TABLE `wagtailcore_pagerevision` ADD INDEX ( created_at ) ;
-ALTER TABLE `wagtailcore_pagerevision` ADD INDEX ( page_id ) ;
-ALTER TABLE `wagtailcore_pagerevision` ADD INDEX ( submitted_for_moderation ) ;
-ALTER TABLE `wagtailcore_pagerevision` ADD INDEX ( user_id ) ;
-ALTER TABLE `wagtailcore_pageviewrestriction_groups` ADD INDEX ( pageviewrestriction_id ) ;
-ALTER TABLE `wagtailcore_pageviewrestriction_groups` ADD INDEX ( group_id ) ;
-ALTER TABLE `wagtailcore_pageviewrestriction` ADD INDEX ( page_id ) ;
-ALTER TABLE `wagtailcore_site` ADD INDEX ( hostname ) ;
-ALTER TABLE `wagtailcore_site` ADD INDEX ( hostname varchar_pattern_ops ) ;
-ALTER TABLE `wagtailcore_site` ADD INDEX ( root_page_id ) ;
-ALTER TABLE `wagtaildocs_document` ADD INDEX ( collection_id ) ;
-ALTER TABLE `wagtaildocs_document` ADD INDEX ( uploaded_by_user_id ) ;
-ALTER TABLE `wagtailforms_formsubmission` ADD INDEX ( page_id ) ;
-ALTER TABLE `wagtailimages_image` ADD INDEX ( collection_id ) ;
-ALTER TABLE `wagtailimages_image` ADD INDEX ( created_at ) ;
-ALTER TABLE `wagtailimages_image` ADD INDEX ( uploaded_by_user_id ) ;
-ALTER TABLE `wagtailimages_rendition` ADD INDEX ( filter_spec ) ;
-ALTER TABLE `wagtailimages_rendition` ADD INDEX ( filter_spec varchar_pattern_ops ) ;
-ALTER TABLE `wagtailimages_rendition` ADD INDEX ( image_id ) ;
-ALTER TABLE `wagtailredirects_redirect` ADD INDEX ( old_path ) ;
-ALTER TABLE `wagtailredirects_redirect` ADD INDEX ( old_path varchar_pattern_ops ) ;
-ALTER TABLE `wagtailredirects_redirect` ADD INDEX ( redirect_page_id ) ;
-ALTER TABLE `wagtailredirects_redirect` ADD INDEX ( site_id ) ;
-ALTER TABLE `wagtailsearch_editorspick` ADD INDEX ( page_id ) ;
-ALTER TABLE `wagtailsearch_editorspick` ADD INDEX ( query_id ) ;
-ALTER TABLE `wagtailsearch_query` ADD INDEX ( query_string varchar_pattern_ops ) ;
-ALTER TABLE `wagtailsearch_querydailyhits` ADD INDEX ( query_id ) ;
+-- ALTER TABLE auth_group_permissions
+--     ADD CONSTRAINT auth_group_permissions_pkey PRIMARY KEY (id);
+-- ALTER TABLE auth_group
+--     ADD CONSTRAINT auth_group_pkey PRIMARY KEY (id);
+-- ALTER TABLE auth_permission
+--     ADD CONSTRAINT auth_permission_pkey PRIMARY KEY (id);
+-- ALTER TABLE auth_user_groups
+--     ADD CONSTRAINT auth_user_groups_pkey PRIMARY KEY (id);
+-- ALTER TABLE auth_user
+--     ADD CONSTRAINT auth_user_pkey PRIMARY KEY (id);
+-- ALTER TABLE auth_user_user_permissions
+--     ADD CONSTRAINT auth_user_user_permissions_pkey PRIMARY KEY (id);
+-- ALTER TABLE blog_blog
+--     ADD CONSTRAINT blog_blog_pkey PRIMARY KEY (page_ptr_id);
+-- ALTER TABLE blog_blogpage
+--     ADD CONSTRAINT blog_blogpage_pkey PRIMARY KEY (page_ptr_id);
+-- ALTER TABLE blog_blogpagegalleryimage
+--     ADD CONSTRAINT blog_blogpagegalleryimage_pkey PRIMARY KEY (id);
+-- ALTER TABLE django_admin_log
+--     ADD CONSTRAINT django_admin_log_pkey PRIMARY KEY (id);
+-- ALTER TABLE django_content_type
+--     ADD CONSTRAINT django_content_type_pkey PRIMARY KEY (id);
+-- ALTER TABLE django_migrations
+--     ADD CONSTRAINT django_migrations_pkey PRIMARY KEY (id);
+-- ALTER TABLE django_session
+--     ADD CONSTRAINT django_session_pkey PRIMARY KEY (session_key);
+-- ALTER TABLE home_homepage
+--     ADD CONSTRAINT home_homepage_pkey PRIMARY KEY (page_ptr_id);
+-- ALTER TABLE home_pagesection
+--     ADD CONSTRAINT home_pagesection_pkey PRIMARY KEY (page_ptr_id);
+-- ALTER TABLE taggit_tag
+--     ADD CONSTRAINT taggit_tag_pkey PRIMARY KEY (id);
+-- ALTER TABLE taggit_taggeditem
+--     ADD CONSTRAINT taggit_taggeditem_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailcore_collection
+--     ADD CONSTRAINT wagtailcore_collection_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailcore_collectionviewrestriction_groups
+--     ADD CONSTRAINT wagtailcore_collectionviewrestriction_groups_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailcore_collectionviewrestriction
+--     ADD CONSTRAINT wagtailcore_collectionviewrestriction_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailcore_groupcollectionpermission
+--     ADD CONSTRAINT wagtailcore_groupcollectionpermission_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailcore_grouppagepermission
+--     ADD CONSTRAINT wagtailcore_grouppagepermission_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailcore_page
+--     ADD CONSTRAINT wagtailcore_page_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailcore_pagerevision
+--     ADD CONSTRAINT wagtailcore_pagerevision_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailcore_pageviewrestriction_groups
+--     ADD CONSTRAINT wagtailcore_pageviewrestriction_groups_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailcore_pageviewrestriction
+--     ADD CONSTRAINT wagtailcore_pageviewrestriction_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailcore_site
+--     ADD CONSTRAINT wagtailcore_site_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtaildocs_document
+--     ADD CONSTRAINT wagtaildocs_document_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailembeds_embed
+--     ADD CONSTRAINT wagtailembeds_embed_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailforms_formsubmission
+--     ADD CONSTRAINT wagtailforms_formsubmission_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailimages_image
+--     ADD CONSTRAINT wagtailimages_image_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailimages_rendition
+--     ADD CONSTRAINT wagtailimages_rendition_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailredirects_redirect
+--     ADD CONSTRAINT wagtailredirects_redirect_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailsearch_editorspick
+--     ADD CONSTRAINT wagtailsearch_editorspick_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailsearch_query
+--     ADD CONSTRAINT wagtailsearch_query_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailsearch_querydailyhits
+--     ADD CONSTRAINT wagtailsearch_querydailyhits_pkey PRIMARY KEY (id);
+-- ALTER TABLE wagtailusers_userprofile
+--     ADD CONSTRAINT wagtailusers_userprofile_pkey PRIMARY KEY (id);
+-- ALTER TABLE `auth_group` ADD INDEX ( name varchar_pattern_ops ) ;
+-- ALTER TABLE `auth_group_permissions` ADD INDEX ( group_id ) ;
+-- ALTER TABLE `auth_group_permissions` ADD INDEX ( permission_id ) ;
+-- ALTER TABLE `auth_permission` ADD INDEX ( content_type_id ) ;
+-- ALTER TABLE `auth_user_groups` ADD INDEX ( group_id ) ;
+-- ALTER TABLE `auth_user_groups` ADD INDEX ( user_id ) ;
+-- ALTER TABLE `auth_user_user_permissions` ADD INDEX ( permission_id ) ;
+-- ALTER TABLE `auth_user_user_permissions` ADD INDEX ( user_id ) ;
+-- ALTER TABLE `auth_user` ADD INDEX ( username varchar_pattern_ops ) ;
+-- ALTER TABLE `blog_blogpagegalleryimage` ADD INDEX ( image_id ) ;
+-- ALTER TABLE `blog_blogpagegalleryimage` ADD INDEX ( page_id ) ;
+-- ALTER TABLE `django_admin_log` ADD INDEX ( content_type_id ) ;
+-- ALTER TABLE `django_admin_log` ADD INDEX ( user_id ) ;
+-- ALTER TABLE `django_session` ADD INDEX ( expire_date ) ;
+-- ALTER TABLE `django_session` ADD INDEX ( session_key varchar_pattern_ops ) ;
+-- ALTER TABLE `taggit_tag` ADD INDEX ( name varchar_pattern_ops ) ;
+-- ALTER TABLE `taggit_tag` ADD INDEX ( slug varchar_pattern_ops ) ;
+-- ALTER TABLE `taggit_taggeditem` ADD INDEX ( content_type_id ) ;
+-- ALTER TABLE `taggit_taggeditem` ADD INDEX ( content_type_id, object_id ) ;
+-- ALTER TABLE `taggit_taggeditem` ADD INDEX ( object_id ) ;
+-- ALTER TABLE `taggit_taggeditem` ADD INDEX ( tag_id ) ;
+-- ALTER TABLE `wagtailcore_collection` ADD INDEX ( path varchar_pattern_ops ) ;
+-- ALTER TABLE `wagtailcore_collectionviewrestriction_groups` ADD INDEX ( collectionviewrestriction_id ) ;
+-- ALTER TABLE `wagtailcore_collectionviewrestriction` ADD INDEX ( collection_id ) ;
+-- ALTER TABLE `wagtailcore_collectionviewrestriction_groups` ADD INDEX ( group_id ) ;
+-- ALTER TABLE `wagtailcore_groupcollectionpermission` ADD INDEX ( collection_id ) ;
+-- ALTER TABLE `wagtailcore_groupcollectionpermission` ADD INDEX ( group_id ) ;
+-- ALTER TABLE `wagtailcore_groupcollectionpermission` ADD INDEX ( permission_id ) ;
+-- ALTER TABLE `wagtailcore_grouppagepermission` ADD INDEX ( group_id ) ;
+-- ALTER TABLE `wagtailcore_grouppagepermission` ADD INDEX ( page_id ) ;
+-- ALTER TABLE `wagtailcore_page` ADD INDEX ( content_type_id ) ;
+-- ALTER TABLE `wagtailcore_page` ADD INDEX ( first_published_at ) ;
+-- ALTER TABLE `wagtailcore_page` ADD INDEX ( live_revision_id ) ;
+-- ALTER TABLE `wagtailcore_page` ADD INDEX ( owner_id ) ;
+-- ALTER TABLE `wagtailcore_page` ADD INDEX ( path varchar_pattern_ops ) ;
+-- ALTER TABLE `wagtailcore_page` ADD INDEX ( slug ) ;
+-- ALTER TABLE `wagtailcore_page` ADD INDEX ( slug varchar_pattern_ops ) ;
+-- ALTER TABLE `wagtailcore_pagerevision` ADD INDEX ( created_at ) ;
+-- ALTER TABLE `wagtailcore_pagerevision` ADD INDEX ( page_id ) ;
+-- ALTER TABLE `wagtailcore_pagerevision` ADD INDEX ( submitted_for_moderation ) ;
+-- ALTER TABLE `wagtailcore_pagerevision` ADD INDEX ( user_id ) ;
+-- ALTER TABLE `wagtailcore_pageviewrestriction_groups` ADD INDEX ( pageviewrestriction_id ) ;
+-- ALTER TABLE `wagtailcore_pageviewrestriction_groups` ADD INDEX ( group_id ) ;
+-- ALTER TABLE `wagtailcore_pageviewrestriction` ADD INDEX ( page_id ) ;
+-- ALTER TABLE `wagtailcore_site` ADD INDEX ( hostname ) ;
+-- ALTER TABLE `wagtailcore_site` ADD INDEX ( hostname varchar_pattern_ops ) ;
+-- ALTER TABLE `wagtailcore_site` ADD INDEX ( root_page_id ) ;
+-- ALTER TABLE `wagtaildocs_document` ADD INDEX ( collection_id ) ;
+-- ALTER TABLE `wagtaildocs_document` ADD INDEX ( uploaded_by_user_id ) ;
+-- ALTER TABLE `wagtailforms_formsubmission` ADD INDEX ( page_id ) ;
+-- ALTER TABLE `wagtailimages_image` ADD INDEX ( collection_id ) ;
+-- ALTER TABLE `wagtailimages_image` ADD INDEX ( created_at ) ;
+-- ALTER TABLE `wagtailimages_image` ADD INDEX ( uploaded_by_user_id ) ;
+-- ALTER TABLE `wagtailimages_rendition` ADD INDEX ( filter_spec ) ;
+-- ALTER TABLE `wagtailimages_rendition` ADD INDEX ( filter_spec varchar_pattern_ops ) ;
+-- ALTER TABLE `wagtailimages_rendition` ADD INDEX ( image_id ) ;
+-- ALTER TABLE `wagtailredirects_redirect` ADD INDEX ( old_path ) ;
+-- ALTER TABLE `wagtailredirects_redirect` ADD INDEX ( old_path varchar_pattern_ops ) ;
+-- ALTER TABLE `wagtailredirects_redirect` ADD INDEX ( redirect_page_id ) ;
+-- ALTER TABLE `wagtailredirects_redirect` ADD INDEX ( site_id ) ;
+-- ALTER TABLE `wagtailsearch_editorspick` ADD INDEX ( page_id ) ;
+-- ALTER TABLE `wagtailsearch_editorspick` ADD INDEX ( query_id ) ;
+-- ALTER TABLE `wagtailsearch_query` ADD INDEX ( query_string varchar_pattern_ops ) ;
+-- ALTER TABLE `wagtailsearch_querydailyhits` ADD INDEX ( query_id ) ;
 INSERT INTO wagtailusers_userprofile (id, submitted_notifications, approved_notifications, rejected_notifications, user_id, preferred_language) VALUES
 ('.'),
 (''),
