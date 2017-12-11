@@ -24,7 +24,7 @@ class Jumbotron extends Component {
                                 LES BOIS <br/> ENGINEERING <br/> INNOVATIONS
                             </h1>
 
-                            <h3 className="sub-heading">{`We're engineering awsome`}</h3>
+                            <h3 className="sub-heading">{`We're engineering awesome`}</h3>
 
                             <button className="btn btn-default btn-huge"
                                     onClick={handleClick.bind(this)}>CONTACT US</button>
