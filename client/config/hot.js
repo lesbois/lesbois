@@ -7,10 +7,39 @@ const DOMAIN = process.env.DOMAIN || 'localhost'
 const PORT = process.env.PORT || 8080
 const PROTOCOL = process.env.PROTOCOL || 'http'
 
+const rules =[
+    {
+        test: /\.(jpe|jpg|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+        use: [
+            {
+                loader: 'url-loader', options: {
+                    limit: 8192
+                }
+            }
+        ]
+    },
+    {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+            {loader: 'style-loader', options:{
+                sourceMap: true
+            }},
+            {loader: 'css-loader', options:{
+                sourceMap: true
+            }},
+            {loader: 'sass-loader', options:{
+                sourceMap: true
+            }}
+        ]
+    }
+]
+
 export default () => {
     const strategy = {
         entry: 'append',
-        output: 'append'
+        output: 'append',
+        rules: 'append'
     }
     return merge.strategy(strategy)({
         devtool: 'source-map',
@@ -22,6 +51,9 @@ export default () => {
                 //Only reload successful updates
                 'webpack/hot/only-dev-server'
             ]
+        },
+        module: {
+            rules
         },
         output: {
           publicPath: `${PROTOCOL}://${DOMAIN}:${PORT}/hot/js/`

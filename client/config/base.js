@@ -8,7 +8,7 @@ import BundleTracker from 'webpack-bundle-tracker'
 const document_root = '..'
 
 export const output_paths = {
-    hot: join('', `${document_root}/hot`),
+    hot: join(__dirname, `${document_root}/hot`),
     development: join(__dirname, `${document_root}/dist`),
     production: join(process.cwd(), `${document_root}/lesbois/static/js`)
 }
