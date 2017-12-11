@@ -9,6 +9,10 @@ env.read_env('.env')
 
 DEBUG = env.bool('DEBUG', False)
 
+INSTALLED_APPS += [
+    'webpack_loader'
+]
+
 ALLOWED_HOSTS = [
     "*"
 ]
