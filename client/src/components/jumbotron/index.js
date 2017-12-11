@@ -12,6 +12,7 @@ class Jumbotron extends Component {
 
     render() {
         const { props, handleClick } = this
+        console.log(props)
         return (
             <div id="jumbotron" className="jumbotron">
                 <div className="container grid-xl">
@@ -20,11 +21,10 @@ class Jumbotron extends Component {
                             <img src="/static/img/banner-image.png" />
                         </div>
                         <div className="column column col-4 col-ml-auto col-lg-4 col-md-12 col-sm-12 col-xs-12 jumbotron-content">
-                            <h1 className="heading">
-                                LES BOIS <br/> ENGINEERING <br/> INNOVATIONS
-                            </h1>
+                            <h1 className="heading"
+                                dangerouslySetInnerHTML={{ __html: props.info.heading }}></h1>
 
-                            <h3 className="sub-heading">{`We're engineering awesome`}</h3>
+                            <h3 className="sub-heading">{props.info.sub_heading}</h3>
 
                             <button className="btn btn-default btn-huge"
                                     onClick={handleClick.bind(this)}>CONTACT US</button>

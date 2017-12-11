@@ -3,10 +3,12 @@ from __future__ import absolute_import, unicode_literals
 import json
 
 from django.core.exceptions import ObjectDoesNotExist
+from django.db import models
 
+from wagtail.wagtailcore import blocks
 from wagtail.wagtailcore.models import Page
 from wagtail.wagtailcore.fields import StreamField
-from wagtail.wagtailadmin.edit_handlers import StreamFieldPanel
+from wagtail.wagtailadmin.edit_handlers import StreamFieldPanel, FieldPanel
 from wagtail.wagtailimages.models import Image
 
 from .blocks import PageSectionBlock
@@ -18,7 +20,8 @@ class HomePage(Page):
 
 class PageSection(Page):
     template = 'home/home_page.html'
-
+    heading = models.CharField(max_length=250, null=True)
+    sub_heading = models.CharField(max_length=250, null=True)
     body = StreamField([
         ('section', PageSectionBlock())
     ])
@@ -26,11 +29,17 @@ class PageSection(Page):
     def get_context(self, request):
         context = super(PageSection, self).get_context(request)
         page_dict = self.page_to_dict(context['page'])
+        context['page_info'] = json.dumps({
+            'heading': self.heading,
+            'sub_heading': self.sub_heading
+        })
         context['data_json'] = json.dumps(page_dict)
         return context
 
     content_panels = Page.content_panels + [
-        StreamFieldPanel('body')
+        FieldPanel('heading'),
+        FieldPanel('sub_heading'),
+        StreamFieldPanel('body'),
     ]
 
     def page_to_dict(self, page):

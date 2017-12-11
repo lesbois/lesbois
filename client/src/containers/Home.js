@@ -63,7 +63,7 @@ class Home extends Component {
                 <Navigation
                     screens={screens}
                     menu={menuSettings} />
-                <Jumbotron actions={props.actions}/>
+                <Jumbotron actions={props.actions} info={props.page_info} />
 
                 { props.sections ? <UseSectionProps sections={props.sections} /> : null }
 

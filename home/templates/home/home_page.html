@@ -10,7 +10,8 @@
         <script type="text/javascript">
             app.useClient({
                 token: '{{ csrf_token }}',
-                sections: JSON.parse('{{ data_json | safe }}')
+                sections: JSON.parse('{{ data_json | safe }}'),
+                page_info: JSON.parse('{{ page_info | safe }}')
             }, 'app')
         </script>
     {% else %}
