@@ -7,6 +7,8 @@ client/hot
 .env
 .env.production
 .idea
+media/
+static/
 home/__pycache__/
 home/migrations/__pycache__/
 lesbois/__pycache__/
