@@ -7,6 +7,7 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.response import Response
 from django.conf import settings
 
+
 class ContactView(APIView):
     renderer_classes = (JSONRenderer,)
 
