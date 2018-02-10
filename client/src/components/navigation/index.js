@@ -52,7 +52,7 @@ class Navigation extends Component {
             <div ref="navbar" className="navbar-container">
                 <div className="container grid-xl">
                     <header className="navbar navbar-fixed">
-                        <section className="navbar-section">
+                        <section className="navbar-section navbar-brand-section">
                             <a href="#" className="navbar-brand mr-2">
                                 <img src="/static/img/logo-lbs.png" />
                                 <img src="/static/img/logo-flipped.png" />
@@ -64,7 +64,7 @@ class Navigation extends Component {
                                 {matches => matches ? (
                                     <MobileMenu isOpen={isOpen} menu={menu} moveTo={moveTo} />
                                 ) : (
-                                    <section className="navbar-section">
+                                    <section className="navbar-section navbar-menu-section">
                                         <ul className="navbar-menu">
                                           {map(menu, (value, key) => {
                                               const { hashTag, name } = value
@@ -76,6 +76,9 @@ class Navigation extends Component {
                                           })}
                                           <li className="navbar-menu-item">
                                             <a href="/blog">BLOG</a>
+                                          </li>
+                                          <li className="navbar-menu-item">
+                                            <a href="/careers">CAREER</a>
                                           </li>
                                         </ul>
                                   </section>

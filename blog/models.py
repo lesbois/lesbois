@@ -3,12 +3,11 @@ from django.db import models
 from modelcluster.fields import ParentalKey
 
 from wagtail.wagtailcore.models import Page, Orderable
-from wagtail.wagtailcore import blocks
-from wagtail.wagtailcore.fields import RichTextField, StreamField
+from wagtail.wagtailcore.fields import RichTextField
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
-from wagtail.wagtailsearch import index
 from wagtail.wagtailimages.models import Image
+
 
 class Blog(Page):
     intro = RichTextField(blank=True)
@@ -30,10 +29,6 @@ class BlogPage(Page):
     date = models.DateField("Post date", null=True)
     intro = models.CharField(max_length=250, null=True)
     body = RichTextField(blank=True, null=True)
-    # search_fields = Page.search_fields + [
-    #     index.SearchField('intro'),
-    #     index.SearchField('body'),
-    # ]
 
     def get_context(self, request):
         context = super(BlogPage, self).get_context(request)

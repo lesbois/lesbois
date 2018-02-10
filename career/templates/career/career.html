@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+{% load lesbois_tags %}
+
+{% block body_class %}career{% endblock %}
+
+{% block content %}
+    {% include 'navbar.html' %}
+
+    <div class="jumbotron">
+        <div class="container grid-xl">
+            <h1 class="title">{{ page.title }}</h1>
+            <div class="intro">
+                {{ page.intro|richtext }}
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container grid-xl">
+            <div class="children">
+                <div class="remaining-posts">
+                    <div class="columns">
+                        {% for career in page.get_children %}
+                            {% with career=career.specific %}
+                                <div class="column col-4">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-title h5">{{ career.title }}</div>
+                                            <div class="card-subtitle text-gray">{{ career.intro }}</div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="{% pageurl career %}">Show Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endwith %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
